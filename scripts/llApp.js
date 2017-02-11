@@ -23,5 +23,5 @@ llApp.config(function($routeProvider) {
 });
 
 llApp.controller('filmController', function($scope) {
-  $scope.name = 'Look! I am an about page.';
+  
 });
