@@ -1,36 +1,34 @@
 'use strict';
 
-var llApp = angular.module("llApp", ['ngRoute']);
+var llApp = angular.module("llApp", ['ngRoute'])
 
-llApp.controller("llCtrl", function($scope, $http){
+.controller('MainController', function($scope, $route, $routeParams, $location) {
+    $scope.$route = $route;
+    $scope.$location = $location;
+    $scope.$routeParams = $routeParams;
+})
 
-});
+.controller('FilmController', function($scope, $routeParams) {
+    $scope.name = 'FilmController';
+    $scope.params = $routeParams;
+})
 
-llApp.config(function ($routeProvider,  $locationProvider) {
-    // configure the routes
+.config(function($routeProvider, $locationProvider) {
+  $routeProvider
+   .when('film', {
+    templateUrl: 'film.html',
+    controller: 'FilmController',
+    resolve: {
+      // I will cause a 1 second delay
+      delay: function($q, $timeout) {
+        var delay = $q.defer();
+        $timeout(delay.resolve, 1000);
+        return delay.promise;
+      }
+    }
+  });
 
-    $routeProvider
-    .when('/', {
-    // route for the home page
-        templateUrl: 'home.html',
-        controller: 'homeController'
-    })
-
-    .when('/about', {
-    // route for the about page
-        templateUrl: 'about.html',
-        controller: 'aboutController'
-    })
-    .otherwise({
-        templateUrl: 'routeNotFound.html',
-       controller: 'notFoundController'
-    });
-
-    $locationProvider.html5Mode(true);
-
-});
-
-llApp.controller("homeController", function($scope, $http, $route){
-
-
+  $locationProvider.html5Mode({
+    enabled: true
+  });
 });
