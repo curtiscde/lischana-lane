@@ -1,7 +1,6 @@
 <div class="container">
   <h2>Film</h2>
-  {{message}}
   <div ng-repeat="film in films">
-    {{film.src}}
+    <iframe width="640" height="360" ng-src="{{film.src}}" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
