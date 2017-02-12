@@ -18,10 +18,10 @@ llApp.config(function($routeProvider) {
     .when('/film', {
       templateUrl : 'film.html',
       controller  : 'filmController'
-    })
+    });
 
 });
 
 llApp.controller('filmController', function($scope) {
-  
+
 });
