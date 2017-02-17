@@ -17,12 +17,19 @@
   <body>
     <header>
       <div class="logo"><a href="#/">Lischana Lane</a></div>
-      <nav>
+      <nav class="main">
         <ul>
           <li><a href="#film">Film</a></il>
-          <li><a href="#photography">Photography</a></il>
+          <li><a href="#photography">Photography</a>
+            <ul>
+              <li><a href="#photography/celebration">Celebration</a></li>
+              <li><a href="#photography/documentary">Documentary</a></li>
+            </ul>
+          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+      <nav class="sub">
       </nav>
     </header>
     <div ng-view></div>
