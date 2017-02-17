@@ -18,6 +18,11 @@ llApp.config(function($routeProvider) {
     .when('/film', {
       templateUrl : 'film.html',
       controller  : 'filmController'
+    })
+
+    .when('/photography/:section', {
+      templateUrl : 'photography.html',
+      controller  : 'photographyController'
     });
 
 });
