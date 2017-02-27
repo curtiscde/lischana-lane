@@ -18,5 +18,8 @@
   "homepage": "https://github.com/CurtTimson/lischana-lane#readme",
   "dependencies": {
     "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
