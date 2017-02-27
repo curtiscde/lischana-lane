@@ -8,6 +8,7 @@ llApp.controller('photographyController', function($scope, $routeParams, $http, 
 
     setTimeout(function(){
       $(".carousel").slick();
+    }, 100);
 
     console.log($scope.photos); //TODO: Remove
 
