@@ -6,7 +6,8 @@ llApp.controller('photographyController', function($scope, $routeParams, $http, 
 
     $scope.photos = mapPhotoJsonToModel(response.data.photos, section);
 
-    $(".carousel").slick();
+    setTimeout(function(){
+      $(".carousel").slick();
 
     console.log($scope.photos); //TODO: Remove
 
