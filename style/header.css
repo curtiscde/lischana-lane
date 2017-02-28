@@ -1,0 +1,60 @@
+header {
+  border-top: 8px solid #ec1c2a;
+  border-bottom: 1px solid #eee;
+}
+header .logo {
+  font-size: 3em;
+  text-align: center;
+  padding: 2em 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+header .logo a {
+  color: #444;
+}
+header .logo a:hover {
+  text-decoration: none;
+}
+header nav.main {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  font: 2em;
+}
+header nav.main ul {
+  list-style-type: none;
+  padding: 0;
+}
+header nav.main > ul > li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 0.2em;
+  width: 33%;
+  text-align: center;
+  font-size: 1.4em;
+  position: relative;
+}
+header nav.main > ul > li > a {
+  color: #666;
+}
+header nav.main > ul > li > a:hover {
+  text-decoration: none;
+}
+header nav.main > ul > li > ul {
+  position: absolute;
+  background: #fff;
+  display: none;
+  width: 100%;
+}
+header nav.main > ul > li > ul > li {
+  border: solid 1px #eee;
+  padding: 2px 1px;
+}
+header nav.main > ul > li:hover > ul,
+header nav.main > ul > li ul.open {
+  display: block;
+}
+header nav.sub ul li {
+  list-style-type: none;
+}
