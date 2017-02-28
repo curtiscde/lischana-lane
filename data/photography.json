@@ -1,16 +1,17 @@
 {
   "photos":[
-    {
-      "file": "1.jpg",
-      "sections":[
-        "celebration"
-      ]
-    },
-    {
-      "file": "2.jpg",
-      "sections":[
-        "celebration"
-      ]
-    }
+    { "file": "1.jpg", "sections":["celebration"] },
+    { "file": "2.jpg", "sections":["celebration"] },
+    { "file": "3.jpg", "sections":["documentary"] },
+    { "file": "4.jpg", "sections":["documentary"] },
+    { "file": "5.jpg", "sections":["documentary"] },
+    { "file": "6.jpg", "sections":["documentary"] },
+    { "file": "7.jpg", "sections":["documentary"] },
+    { "file": "8.jpg", "sections":["documentary"] },
+    { "file": "9.jpg", "sections":["documentary"] },
+    { "file": "10.jpg", "sections":["documentary"] },
+    { "file": "11.jpg", "sections":["documentary"] },
+    { "file": "12.jpg", "sections":["documentary"] },
+    { "file": "13.jpg", "sections":["documentary"] }
   ]
 }
