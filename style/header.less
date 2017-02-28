@@ -1,0 +1,85 @@
+@import "variables.less";
+
+header{
+
+  border-top:8px solid @color-primary;
+  border-bottom:1px solid #eee;
+
+  .logo{
+    font-size: 3em;
+    text-align: center;
+    padding:2em 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family:'Open Sans', sans-serif;
+
+    a{
+      color:@color-base;
+
+      &:hover{
+        text-decoration:none;
+      }
+
+    }
+  }
+
+  nav.main{
+    width:100%;
+    max-width: 700px;
+    margin:0 auto;
+    font:2em;
+
+    ul{
+        list-style-type: none;
+        padding:0;
+    }
+
+    > ul{
+
+      > li{
+
+        display: inline-block;
+        text-transform:uppercase;
+        padding: 0 0.2em;
+        width:33%;
+        text-align: center;
+        font-size:1.4em;
+        position: relative;
+
+        > a{
+          color:#666;
+          &:hover{
+            text-decoration:none;
+          }
+        }
+
+        > ul{
+          position:absolute;
+          background:#fff;
+          display: none;
+          width:100%;
+
+          > li{
+            border:solid 1px #eee;
+            padding:2px 1px;
+          }
+        }
+
+        &:hover > ul,
+        ul.open{
+          display: block;
+        }
+
+      }
+
+    }
+  }
+
+  nav.sub{
+    ul{
+      li{
+        list-style-type: none;
+      }
+    }
+  }
+}
