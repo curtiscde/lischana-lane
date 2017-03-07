@@ -15,8 +15,15 @@ gulp.task('less-watch', function(){
   gulp.watch(stylePath, [lessTask]);
 });
 
+gulp.task("copy-npm-files", function () {
+    return gulp.src(['./node_modules/slick-carousel/slick/slick.css',
+                      './node_modules/jquery/dist/jquery.min.js',
+                      './node_modules/slick-carousel/slick/slick.min.js'])
+        .pipe(gulp.dest('./app/npm/'))
+});
+
 gulp.task('publish', function(){
-  return gulp.src('**/**')
+  return gulp.src('./app/**/**')
     // .pipe(useref())
     // .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
