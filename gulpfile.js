@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 var less = require("gulp-less");
+var useref = require('gulp-useref');
 var ghPages = require('gulp-gh-pages');
 
 var stylePath = "style/**/*.less";
@@ -24,7 +25,7 @@ gulp.task("copy-npm-files", function () {
 
 gulp.task('publish', function(){
   return gulp.src('./app/**/**')
-    // .pipe(useref())
+     .pipe(useref())
     // .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });

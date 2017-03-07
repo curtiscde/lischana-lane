@@ -22,6 +22,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-less": "^3.3.0"
+    "gulp-less": "^3.3.0",
+    "gulp-useref": "^3.1.2"
   }
 }
