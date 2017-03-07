@@ -16,7 +16,7 @@ gulp.task('less-watch', function(){
 });
 
 gulp.task('publish', function(){
-  return gulp.src(['**/**', '!dist', '!node_modules'])
+  return gulp.src('**/**')
     // .pipe(useref())
     // .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
