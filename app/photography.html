@@ -1,8 +1,8 @@
 <div class="container">
   <h1>Photography</h1>
-  <div class="gallery">
-    <img ng-repeat="photo in photos" alt="Image 2 Title" src="thumbs/image2.jpg"
-				data-image="images/image02.jpg"
+  <div id="gallery">
+    <img ng-repeat="photo in photos" alt="Image 2 Title" src="{{photo.file}}"
+				data-image="{{photo.file}}"
 				data-description="Image 2 Description" />
   </div>
 </div>
