@@ -1,4 +1,4 @@
-llApp.controller('filmController', function($scope, $http, $timeout, $sce) {
+ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce) {
 
   $http.get("data/film.json").then(function(response){
     console.log(response.data.films); //TODO: Remove
