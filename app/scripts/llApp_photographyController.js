@@ -16,7 +16,7 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
     var flickrUrl = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos"
                     + "&api_key=" + ll.config.flickr.apiKey
                     + "&photoset_id=" + flickrSetId
-                    + "&user_id=81674685%40N04"
+                    + "&user_id=" + encodeURIComponent(ll.config.flickr.userId)
                     + "&extras=url_m%2C+url_o"
                     + "&format=json"
                     + "&nojsoncallback=1";
