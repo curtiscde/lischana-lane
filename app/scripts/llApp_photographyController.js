@@ -13,8 +13,15 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
       }
     }
 
-    $http.get("https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=216973c8a63e3101968818cc48ddfa37&photoset_id=72157679280793261&user_id=81674685%40N04&extras=url_m%2C+url_o&format=json&nojsoncallback=1&api_sig=aae4cdaf0026eb49f8a5e86b8cab7ed2")
-          .then(function(r){
+    var flickrUrl = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos"
+                    + "&api_key=" + ll.config.flickr.apiKey
+                    + "&photoset_id=" + flickrSetId
+                    + "&user_id=81674685%40N04"
+                    + "&extras=url_m%2C+url_o"
+                    + "&format=json"
+                    + "&nojsoncallback=1";
+
+    $http.get(flickrUrl).then(function(r){
 
             console.log(r.data.photoset.photo);
 

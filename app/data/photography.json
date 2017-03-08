@@ -2,11 +2,11 @@
   "albums":[
     {
       "name": "celebration",
-      "flickrId": 72157679280793261
+      "flickrId": "72157679280793261"
     },
     {
       "name": "documentary",
-      "flickrId": 72157678860153562
+      "flickrId": "72157678860153562"
     }
   ]
 }
