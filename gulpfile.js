@@ -17,9 +17,7 @@ gulp.task('less-watch', function(){
 });
 
 gulp.task("copy-npm-files", function () {
-    return gulp.src(['./node_modules/slick-carousel/slick/slick.css',
-                      './node_modules/jquery/dist/jquery.min.js',
-                      './node_modules/slick-carousel/slick/slick.min.js'])
+    return gulp.src(['./node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest('./app/npm/'))
 });
 
