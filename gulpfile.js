@@ -3,13 +3,13 @@ var less = require("gulp-less");
 var useref = require('gulp-useref');
 var ghPages = require('gulp-gh-pages');
 
-var stylePath = "style/**/*.less";
+var stylePath = "app/style/**/*.less";
 var lessTask = "less";
 
 gulp.task(lessTask, function(){
   return gulp.src(stylePath)
     .pipe(less())
-    .pipe(gulp.dest('style'))
+    .pipe(gulp.dest('app/style'))
 });
 
 gulp.task('less-watch', function(){
