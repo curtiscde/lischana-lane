@@ -4,25 +4,41 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
   $http.get("data/photography.json").then(function(response){
 
-    $scope.photos = mapPhotoJsonToModel(response.data.photos, section);
+    var flickrSetId;
+    for(var i = 0; i < response.data.albums.length; i++){
+      var album = response.data.albums[i];
+      if (album.name == section){
+        flickrSetId = album.flickrId;
+        break;
+      }
+    }
 
-    setTimeout(function(){
-      $("#gallery").unitegallery();
-    }, 1000);
+    $http.get("https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=216973c8a63e3101968818cc48ddfa37&photoset_id=72157679280793261&user_id=81674685%40N04&extras=url_m%2C+url_o&format=json&nojsoncallback=1&api_sig=aae4cdaf0026eb49f8a5e86b8cab7ed2")
+          .then(function(r){
 
-    console.log($scope.photos); //TODO: Remove
+            console.log(r.data.photoset.photo);
+
+            $scope.photos = mapPhotoJsonToModel(r.data.photoset.photo);
+
+            console.log($scope.photos);
+
+            setTimeout(function(){
+              $("#gallery").unitegallery();
+            }, 1000);
+
+    });
 
   }, function(){
     console.log("error");
   });
 
-  var mapPhotoJsonToModel = function(data, section){
+  var mapPhotoJsonToModel = function(data){
     var photos = [];
-    data.filter(function(photo){
-      return photo.sections.indexOf(section)>=0;
-    }).map(function(i,v){
+    data.map(function(i,v){
       photos.push({
-        file:"images/photography/" + i.file
+        title: i.title,
+        thumbnailsrc: $sce.trustAsResourceUrl(i.url_m),
+        imgsrc:$sce.trustAsResourceUrl(i.url_o)
       });
     });
     return photos;
