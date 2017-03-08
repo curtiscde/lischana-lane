@@ -1,13 +1,13 @@
 'use strict';
-
-var llApp = angular.module("llApp", ['ngRoute'])
+var ll = ll || {};
+ll.llApp = angular.module("llApp", ['ngRoute'])
 
 .controller('mainController', function($scope, $route, $routeParams, $location) {
 
 });
 
 // configure our routes
-llApp.config(function($routeProvider) {
+ll.llApp.config(function($routeProvider) {
   $routeProvider
 
     .when('/', {

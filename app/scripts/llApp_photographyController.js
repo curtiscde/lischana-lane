@@ -1,4 +1,4 @@
-llApp.controller('photographyController', function($scope, $routeParams, $http, $sce) {
+ll.llApp.controller('photographyController', function($scope, $routeParams, $http, $sce) {
 
   var section = $routeParams.section;
 
