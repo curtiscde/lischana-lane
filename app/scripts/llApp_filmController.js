@@ -5,6 +5,12 @@ ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce) {
 
     $scope.films = mapFilmJsonToModel(response.data.films);
 
+    console.log($scope.films);
+
+    setTimeout(function(){
+    $("#film-list").unitegallery();
+  },2000);
+
   }, function(){
     console.log("error");
   });
@@ -14,7 +20,10 @@ ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce) {
     for(let i = 0; i<data.length; i++){
       let film = data[i];
       films.push({
-        src: $sce.trustAsResourceUrl(film.src)
+        name: film.name,
+        src: $sce.trustAsResourceUrl(film.src),
+        videoid: film.videoid,
+        type: film.type
       });
     }
     return films;
