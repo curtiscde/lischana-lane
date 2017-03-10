@@ -23,9 +23,6 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
     $http.get(flickrUrl).then(function(r){
         $scope.photos = mapPhotoJsonToModel(r.data.photoset.photo);
-        setTimeout(function(){
-          $("#gallery").unitegallery();
-        }, 1000);
     });
 
   }, function(){
@@ -46,11 +43,13 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
 });
 
-ll.llApp.directive("photolist", function(){
+ll.llApp.directive("photolist", function($timeout){
     return {
       templateUrl: 'template/photolist.html',
       link: function($scope, element, attrs){
-
+        $timeout(function(){
+          $("#gallery").unitegallery();
+        },1000);
       }
     };
 });
