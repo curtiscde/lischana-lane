@@ -22,17 +22,10 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
                     + "&nojsoncallback=1";
 
     $http.get(flickrUrl).then(function(r){
-
-            console.log(r.data.photoset.photo);
-
-            $scope.photos = mapPhotoJsonToModel(r.data.photoset.photo);
-
-            console.log($scope.photos);
-
-            setTimeout(function(){
-              $("#gallery").unitegallery();
-            }, 1000);
-
+        $scope.photos = mapPhotoJsonToModel(r.data.photoset.photo);
+        setTimeout(function(){
+          $("#gallery").unitegallery();
+        }, 1000);
     });
 
   }, function(){
