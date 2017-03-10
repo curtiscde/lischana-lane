@@ -52,3 +52,12 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
   };
 
 });
+
+ll.llApp.directive("photolist", function(){
+    return {
+      templateUrl: 'template/photolist.html',
+      link: function($scope, element, attrs){
+
+      }
+    };
+});
