@@ -2,6 +2,8 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
   var section = $routeParams.section;
 
+  $scope.section = section;
+
   $http.get("data/photography.json").then(function(response){
 
     var flickrSetId;
