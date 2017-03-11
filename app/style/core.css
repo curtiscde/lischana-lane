@@ -7,6 +7,11 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-h2 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
+  font-family: 'Poiret One', cursive, 'Open Sans', sans-serif;
+  width: 100%;
+  text-align: center;
 }
