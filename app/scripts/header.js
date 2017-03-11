@@ -10,13 +10,20 @@ ll.header = function(){
 
     var $logo = $(".logo");
     var $logoText = $logo.find("a");
+    var logoTop = $logo.offset().top;
 
     $(window).on("scroll", function(){
-
       var wScrollTop = $(window).scrollTop();
-      var logoTop = $logo.offset().top;
 
-      $logoText.toggleClass("fixed", (logoTop <= wScrollTop));
+      var logoOffScreen = false;
+
+      if(logoTop <= wScrollTop){
+        logoOffScreen = true;
+        $(".logo-spacer").height($logo.outerHeight(true));
+      }
+
+      $(".logo-spacer").toggleClass("show", logoOffScreen);
+      $logo.toggleClass("fixed", logoOffScreen);
 
     });
 

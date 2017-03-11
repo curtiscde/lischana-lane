@@ -17,6 +17,13 @@ header .logo {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-family: 'Poiret One', cursive, 'Open Sans', sans-serif;
+  background: #fff;
+}
+header .logo.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 header .logo a {
   color: #444;
@@ -24,12 +31,11 @@ header .logo a {
 header .logo a:hover {
   text-decoration: none;
 }
-header .logo a.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  background: #fff;
+header .logo-spacer {
+  display: none;
+}
+header .logo-spacer.show {
+  display: block;
 }
 header nav.main {
   width: 100%;

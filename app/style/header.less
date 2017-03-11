@@ -21,6 +21,14 @@ header{
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family:'Poiret One', cursive, 'Open Sans', sans-serif;
+    background: #fff;
+
+    &.fixed{
+      position: fixed;
+      top:0;
+      width: 100%;
+      z-index:1;
+    }
 
     a{
       color:@color-base;
@@ -29,15 +37,13 @@ header{
         text-decoration:none;
       }
 
-      &.fixed{
-        position: fixed;
-        top:0;
-        width: 100%;
-        left: 0;
-        background: #fff;
+    }
+  }
 
-      }
-
+  .logo-spacer{
+    display:none;
+    &.show{
+      display: block;
     }
   }
 
