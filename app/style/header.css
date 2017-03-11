@@ -78,6 +78,7 @@ header nav.main > ul > li {
 }
 header nav.main > ul > li > a {
   color: #666;
+  cursor: pointer;
 }
 header nav.main > ul > li > a:hover {
   text-decoration: none;
