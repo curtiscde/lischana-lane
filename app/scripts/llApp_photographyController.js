@@ -1,15 +1,23 @@
 ll.llApp.controller('photographyController', function($scope, $routeParams, $http, $sce) {
 
-  var section = $routeParams.section;
-
   $http.get("data/photography.json").then(function(response){
 
-    section = section || response.data.albums[0].name;
-    $scope.section = section
+    var selectedSection = response.data.albums[0].name;
+    $scope.selectedSection = selectedSection;
+
+    $scope.sections = response.data.albums;
+
+    $scope.loadSectionList(selectedSection);
+
+  }, function(){
+    console.log("error");
+  });
+
+  var loadSectionList = function(section){
 
     var flickrSetId;
-    for(var i = 0; i < response.data.albums.length; i++){
-      var album = response.data.albums[i];
+    for(var i = 0; i < $scope.sections.length; i++){
+      var album = $scope.sections[i];
       if (album.name == section){
         flickrSetId = album.flickrId;
         break;
@@ -27,10 +35,9 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
     $http.get(flickrUrl).then(function(r){
         $scope.photos = mapPhotoJsonToModel(r.data.photoset.photo);
     });
+  }
 
-  }, function(){
-    console.log("error");
-  });
+  $scope.loadSectionList = loadSectionList;
 
   var mapPhotoJsonToModel = function(data){
     var photos = [];

@@ -1,7 +1,10 @@
 <div class="container">
   <h1>Photography</h1>
-  <h2>{{section}}</h2>
-  <div id="gallery">
+  <ul class="sub-menu">
+    <li ng-repeat="section in sections"><a ng-click="loadSectionList(section.name);">{{section.name}}</a></li>
+  </ul>
+  <h2>{{selectedSection}}</h2>
+  <div id="gallery" class="list">
     <img ng-repeat="photo in photos" alt="{{photo.title}}" ng-src="{{photo.thumbnailsrc}}"
         data-image="{{photo.imgsrc}}"
         data-description="{{photo.title}}" />

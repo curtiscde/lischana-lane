@@ -1,13 +1,10 @@
 <div class="container">
   <h2>Film</h2>
-  <div id="film-list">
+  <div id="film-list" class="list">
       <div ng-repeat="film in films"
           alt="{{film.name}}"
 				    data-type="youtube"
 				     data-videoid="{{film.videoid}}"
              data-title="{{film.name}}"></div>
   </div>
-  <!-- <div class="film-list" ng-repeat="film in films">
-    <iframe width="640" height="360" ng-src="{{film.src}}" frameborder="0" allowfullscreen></iframe>
-  </div> -->
 </div>
