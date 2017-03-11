@@ -2,6 +2,14 @@ header {
   border-top: 8px solid #ec1c2a;
   border-bottom: 1px solid #eee;
 }
+header .box {
+  background-image: url('https://farm1.staticflickr.com/774/33327229795_22e4cbb423_c.jpg');
+  background-size: contain;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 200px;
+}
 header .logo {
   font-size: 3em;
   text-align: center;
@@ -15,6 +23,13 @@ header .logo a {
 }
 header .logo a:hover {
   text-decoration: none;
+}
+header .logo a.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background: #fff;
 }
 header nav.main {
   width: 100%;
