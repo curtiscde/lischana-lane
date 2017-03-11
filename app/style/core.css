@@ -1,3 +1,14 @@
+.prevent-select {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+  -ms-user-select: none;
+  user-select: none;
+}
 body {
   font-size: 10px;
   color: #444;
