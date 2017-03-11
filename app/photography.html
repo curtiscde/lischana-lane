@@ -4,9 +4,5 @@
     <li ng-repeat="section in sections"><a ng-click="loadSectionList(section.name);">{{section.name}}</a></li>
   </ul>
   <h2>{{selectedSection}}</h2>
-  <div id="gallery" class="list">
-    <img ng-repeat="photo in photos" alt="{{photo.title}}" ng-src="{{photo.thumbnailsrc}}"
-        data-image="{{photo.imgsrc}}"
-        data-description="{{photo.title}}" />
-  </div>
+  <div photolist></div>
 </div>

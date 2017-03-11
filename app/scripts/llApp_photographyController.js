@@ -13,7 +13,7 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
     console.log("error");
   });
 
-  var loadSectionList = function(section){
+  $scope.loadSectionList = function(section){
 
     var flickrSetId;
     for(var i = 0; i < $scope.sections.length; i++){
@@ -37,7 +37,8 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
     });
   }
 
-  $scope.loadSectionList = loadSectionList;
+
+
 
   var mapPhotoJsonToModel = function(data){
     var photos = [];
@@ -53,13 +54,21 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
 });
 
-ll.llApp.directive("photoview", function($timeout){
+ll.llApp.directive("photoview", function(){
     return {
       templateUrl: 'photography.html',
       link: function($scope, element, attrs){
+      }
+    };
+});
+
+ll.llApp.directive("photolist", function($timeout){
+  return{
+    template: '<div id="gallery" class="list"><img ng-repeat="photo in photos" alt="{{photo.title}}" ng-src="{{photo.thumbnailsrc}}" data-image="{{photo.imgsrc}}" data-description="{{photo.title}}" /></div>',
+    link: function($scope, element, attrs){
         $timeout(function(){
           $("#gallery").unitegallery();
         },1000);
-      }
-    };
+    }
+  }
 });
