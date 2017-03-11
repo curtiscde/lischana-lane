@@ -5,6 +5,15 @@ header{
   border-top:8px solid @color-primary;
   border-bottom:1px solid #eee;
 
+  .box{
+    background-image:url('https://farm1.staticflickr.com/774/33327229795_22e4cbb423_c.jpg');
+    background-size:contain;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height:300px;
+  }
+
   .logo{
     font-size: 3em;
     text-align: center;
@@ -12,6 +21,14 @@ header{
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family:'Poiret One', cursive, 'Open Sans', sans-serif;
+    background: #fff;
+
+    &.fixed{
+      position: fixed;
+      top:0;
+      width: 100%;
+      z-index:1;
+    }
 
     a{
       color:@color-base;
@@ -20,6 +37,13 @@ header{
         text-decoration:none;
       }
 
+    }
+  }
+
+  .logo-spacer{
+    display:none;
+    &.show{
+      display: block;
     }
   }
 
