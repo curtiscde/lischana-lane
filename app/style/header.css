@@ -78,24 +78,12 @@ header nav.main > ul > li {
 }
 header nav.main > ul > li > a {
   color: #666;
+  cursor: pointer;
 }
 header nav.main > ul > li > a:hover {
   text-decoration: none;
 }
-header nav.main > ul > li > ul {
-  position: absolute;
-  background: #fff;
-  display: none;
-  width: 100%;
-}
-header nav.main > ul > li > ul > li {
-  border: solid 1px #eee;
-  padding: 2px 1px;
-}
 header nav.main > ul > li:hover > ul,
 header nav.main > ul > li ul.open {
   display: block;
-}
-header nav.sub ul li {
-  list-style-type: none;
 }

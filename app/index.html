@@ -27,18 +27,18 @@
       <div class="logo-spacer"></div>
       <nav class="main">
         <ul>
-          <li><a href="#film">Film</a></il>
-          <li>Photography
-            <ul>
-              <li><a href="#photography/celebration">Celebration</a></li>
-              <li><a href="#photography/documentary">Documentary</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a ng-click="scrollTo('film')">Film</a></il>
+          <li><a ng-click="scrollTo('photography')">Photography</a></li>
+          <li><a ng-click="scrollTo('contact')">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div ng-view></div>
+    <section id="film" ng-controller="filmController">
+      <div filmview></div>
+    </section>
+    <section id="photography" ng-controller="photographyController">
+      <div photoview></div>
+    </section>
     <footer>
       <div class="container">
         Lischana Lane 2017

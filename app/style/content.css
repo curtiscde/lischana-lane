@@ -1,3 +1,13 @@
+section {
+  padding: 10px 0 80px 0;
+}
+section ul.sub-menu li {
+  list-style: none;
+  display: inline-block;
+}
+section .list {
+  padding-top: 20px;
+}
 .film-list {
   padding: 1em 0;
 }

@@ -1,5 +1,8 @@
 <div class="container">
   <h1>Photography</h1>
-  <h2>{{section}}</h2>
-  <div id="gallery" photolist></div>
+  <ul class="sub-menu">
+    <li ng-repeat="section in sections"><a ng-click="loadSectionList(section.name);">{{section.name}}</a></li>
+  </ul>
+  <h2>{{selectedSection}}</h2>
+  <div photolist></div>
 </div>

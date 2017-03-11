@@ -30,3 +30,12 @@ ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce) {
   };
 
 });
+
+ll.llApp.directive("filmview", function($timeout){
+    return {
+      templateUrl: 'film.html',
+      link: function($scope, element, attrs){
+      
+      }
+    };
+});
