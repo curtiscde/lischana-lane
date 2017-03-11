@@ -2,9 +2,10 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
   var section = $routeParams.section;
 
-  $scope.section = section;
-
   $http.get("data/photography.json").then(function(response){
+
+    section = section || response.data.albums[0].name;
+    $scope.section = section
 
     var flickrSetId;
     for(var i = 0; i < response.data.albums.length; i++){
@@ -45,9 +46,9 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
 });
 
-ll.llApp.directive("photolist", function($timeout){
+ll.llApp.directive("photoview", function($timeout){
     return {
-      templateUrl: 'template/photolist.html',
+      templateUrl: 'photography.html',
       link: function($scope, element, attrs){
         $timeout(function(){
           $("#gallery").unitegallery();

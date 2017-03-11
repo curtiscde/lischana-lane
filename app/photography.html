@@ -1,5 +1,9 @@
 <div class="container">
   <h1>Photography</h1>
   <h2>{{section}}</h2>
-  <div id="gallery" photolist></div>
+  <div id="gallery">
+    <img ng-repeat="photo in photos" alt="{{photo.title}}" ng-src="{{photo.thumbnailsrc}}"
+        data-image="{{photo.imgsrc}}"
+        data-description="{{photo.title}}" />
+  </div>
 </div>
