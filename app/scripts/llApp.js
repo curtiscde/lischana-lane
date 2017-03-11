@@ -6,23 +6,23 @@ ll.llApp = angular.module("llApp", ['ngRoute'])
 
 });
 
-// configure our routes
-ll.llApp.config(function($routeProvider) {
-  $routeProvider
-
-    .when('/', {
-      templateUrl : 'home.html',
-      controller  : 'mainController'
-    })
-
-    .when('/film', {
-      templateUrl : 'film.html',
-      controller  : 'filmController'
-    })
-
-    .when('/photography/:section', {
-      templateUrl : 'photography.html',
-      controller  : 'photographyController'
-    });
-
-});
+// // configure our routes
+// ll.llApp.config(function($routeProvider) {
+//   $routeProvider
+//
+//     .when('/', {
+//       templateUrl : 'home.html',
+//       controller  : 'mainController'
+//     })
+//
+//     .when('/film', {
+//       templateUrl : 'film.html',
+//       controller  : 'filmController'
+//     })
+//
+//     .when('/photography/:section', {
+//       templateUrl : 'photography.html',
+//       controller  : 'photographyController'
+//     });
+//
+// });
