@@ -1,26 +1,5 @@
-.prevent-select {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  /*
-     Introduced in IE 10.
-     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-   */
-  -ms-user-select: none;
-  user-select: none;
-}
-header {
-  border-top: 8px solid #ec1c2a;
-}
-header .box {
-  background-image: url('https://farm1.staticflickr.com/774/33327229795_22e4cbb423_c.jpg');
-  background-size: contain;
-  background-position: top center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 200px;
-}
 header .sticky {
+  border-top: 8px solid #ec1c2a;
   border-bottom: 1px solid #eee;
   background: #fff;
 }
