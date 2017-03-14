@@ -27,6 +27,8 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
   });
 
   $scope.loadSectionList = function(section){
+    
+    $scope.selectedSection = section;
 
     var flickrSetId;
     for(var i = 0; i < $scope.sections.length; i++){
