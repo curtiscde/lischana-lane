@@ -8,22 +8,22 @@ ll.header = function(){
 
   var logoPosition = function(){
 
-    var $logo = $(".logo");
-    var $logoText = $logo.find("a");
-    var logoTop = $logo.offset().top;
+    var $sticky = $(".sticky");
+    var stickyTop = $sticky.offset().top;
+    var $stickySpacer = $(".sticky-spacer");
 
     $(window).on("scroll", function(){
       var wScrollTop = $(window).scrollTop();
 
-      var logoOffScreen = false;
+      var stickyOffScreen = false;
 
-      if(logoTop <= wScrollTop){
-        logoOffScreen = true;
-        $(".logo-spacer").height($logo.outerHeight(true));
+      if(stickyTop <= wScrollTop){
+        stickyOffScreen = true;
+        $stickySpacer.height($sticky.outerHeight(true));
       }
 
-      $(".logo-spacer").toggleClass("show", logoOffScreen);
-      $logo.toggleClass("fixed", logoOffScreen);
+      $sticky.toggleClass("fixed", stickyOffScreen);
+      $stickySpacer.toggleClass("show", stickyOffScreen);
 
     });
 

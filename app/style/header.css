@@ -11,7 +11,6 @@
 }
 header {
   border-top: 8px solid #ec1c2a;
-  border-bottom: 1px solid #eee;
 }
 header .box {
   background-image: url('https://farm1.staticflickr.com/774/33327229795_22e4cbb423_c.jpg');
@@ -19,7 +18,20 @@ header .box {
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 200px;
+}
+header .sticky {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+header .sticky.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+header .sticky.fixed .box {
+  display: none;
 }
 header .logo {
   font-size: 3em;
@@ -28,25 +40,12 @@ header .logo {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-family: 'Poiret One', cursive, 'Open Sans', sans-serif;
-  background: #fff;
-}
-header .logo.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
 }
 header .logo a {
   color: #444;
 }
 header .logo a:hover {
   text-decoration: none;
-}
-header .logo-spacer {
-  display: none;
-}
-header .logo-spacer.show {
-  display: block;
 }
 header nav.main {
   width: 100%;
@@ -89,5 +88,11 @@ header nav.main > ul > li > a .icon {
 }
 header nav.main > ul > li:hover > ul,
 header nav.main > ul > li ul.open {
+  display: block;
+}
+.sticky-spacer {
+  display: none;
+}
+.sticky-spacer.show {
   display: block;
 }
