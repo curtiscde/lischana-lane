@@ -1,5 +1,6 @@
 section {
   padding: 10px 0 80px 0;
+  border-bottom: 1px solid #eee;
 }
 section ul.sub-menu li {
   list-style: none;
