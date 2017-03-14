@@ -83,6 +83,10 @@ header nav.main > ul > li > a {
 header nav.main > ul > li > a:hover {
   text-decoration: none;
 }
+header nav.main > ul > li > a .icon {
+  width: 25px;
+  height: 25px;
+}
 header nav.main > ul > li:hover > ul,
 header nav.main > ul > li ul.open {
   display: block;
