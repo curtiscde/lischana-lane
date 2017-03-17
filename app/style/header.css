@@ -1,5 +1,5 @@
 header .sticky {
-  border-top: 8px solid #94C5BF;
+  border-top: 8px solid #ec1c2a;
   border-bottom: 1px solid #eee;
   background: #fff;
 }
@@ -62,8 +62,8 @@ header nav.main > ul > li > a:hover {
   text-decoration: none;
 }
 header nav.main > ul > li > a .icon {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 header nav.main > ul > li:hover > ul,
 header nav.main > ul > li ul.open {
