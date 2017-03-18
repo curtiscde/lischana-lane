@@ -2,15 +2,17 @@ ll.header = function(){
 
   var init = function(){
 
-    logoPosition();
+    headerPosition();
 
   };
 
-  var logoPosition = function(){
+  var headerPosition = function(){
 
     var $sticky = $(".sticky");
     var stickyTop = $sticky.offset().top;
     var $stickySpacer = $(".sticky-spacer");
+
+    setStickySpacerHeight($stickySpacer, $sticky);
 
     $(window).on("scroll", function(){
       var wScrollTop = $(window).scrollTop();
@@ -19,15 +21,16 @@ ll.header = function(){
 
       if(stickyTop <= wScrollTop){
         stickyOffScreen = true;
-        $stickySpacer.height($sticky.outerHeight(true));
+        setStickySpacerHeight($stickySpacer, $sticky);
       }
-
-      $sticky.toggleClass("fixed", stickyOffScreen);
-      $stickySpacer.toggleClass("show", stickyOffScreen);
 
     });
 
   };
+
+  var setStickySpacerHeight = function($stickySpacer, $sticky){
+    $stickySpacer.height($sticky.outerHeight(true));
+  }
 
   return init;
 }();

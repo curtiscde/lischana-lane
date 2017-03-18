@@ -2,15 +2,10 @@ header .sticky {
   border-top: 8px solid #94C5BF;
   border-bottom: 1px solid #eee;
   background: #fff;
-}
-header .sticky.fixed {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
-}
-header .sticky.fixed .box {
-  display: none;
 }
 header .logo {
   font-size: 3em;
@@ -70,8 +65,5 @@ header nav.main > ul > li ul.open {
   display: block;
 }
 .sticky-spacer {
-  display: none;
-}
-.sticky-spacer.show {
   display: block;
 }
