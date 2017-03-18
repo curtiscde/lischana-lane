@@ -3,21 +3,13 @@
 header{
 
   .sticky{
-
     border-top:8px solid @color-primary;
     border-bottom:@section-border;
     background: #fff;
-
-    &.fixed{
-      position: fixed;
-      top:0;
-      width: 100%;
-      z-index:1;
-
-      .box{
-        display:none;
-      }
-    }
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index:1;
   }
 
   .logo{
@@ -87,8 +79,5 @@ header{
 }
 
 .sticky-spacer{
-  display:none;
-  &.show{
-    display: block;
-  }
+  display:block;
 }
