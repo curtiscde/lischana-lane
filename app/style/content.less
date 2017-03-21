@@ -5,9 +5,29 @@ section{
   border-bottom:@section-border;
 
   ul.sub-menu{
+
+    padding:0;
+
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+
     li{
       list-style: none;
       display:inline-block;
+      padding: 10px;
+
+      a{
+        font-family:@font-primary;
+        color: #111;
+        font-size: 1.7em;
+      }
     }
   }
 
