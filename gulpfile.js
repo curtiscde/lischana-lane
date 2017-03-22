@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var less = require("gulp-less");
 var useref = require('gulp-useref');
 var ghPages = require('gulp-gh-pages');
+var bump = require('gulp-bump');
 
 var stylePath = "app/style/**/*.less";
 var lessTask = "less";
@@ -31,4 +32,14 @@ gulp.task('publish', function(){
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
+});
+
+
+
+// Basic usage:
+// Will patch the version
+gulp.task('bump', function(){
+  gulp.src('./package.json')
+  .pipe(bump())
+  .pipe(gulp.dest('./'));
 });
