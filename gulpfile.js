@@ -4,6 +4,7 @@ var useref = require('gulp-useref');
 var ghPages = require('gulp-gh-pages');
 var bump = require('gulp-bump');
 var browserSync = require('browser-sync').create();
+var injectVersion = require('gulp-inject-version');
 
 var stylePath = "app/style/**/*.less";
 var lessTask = "less";
@@ -26,6 +27,7 @@ gulp.task("copy-npm-files", function () {
 gulp.task('publish', function(){
   return gulp.src('./app/**/**')
      .pipe(useref())
+     .pipe(injectVersion())
     // .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
