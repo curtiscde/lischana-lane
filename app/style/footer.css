@@ -1,17 +1,9 @@
-.prevent-select {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  /*
-     Introduced in IE 10.
-     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-   */
-  -ms-user-select: none;
-  user-select: none;
-}
 footer {
   background-color: #242424;
   padding: 10px;
   color: #eee;
   margin-top: 20px;
+}
+footer .version {
+  float: right;
 }
