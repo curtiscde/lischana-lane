@@ -31,7 +31,13 @@ footer .map {
   clear: both;
   text-align: center;
 }
-footer .map img {
+footer .map a {
+  opacity: 0.8;
+}
+footer .map a:hover {
+  opacity: 1;
+}
+footer .map a img {
   max-width: 100%;
 }
 footer .links {
