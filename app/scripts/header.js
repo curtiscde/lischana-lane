@@ -1,15 +1,7 @@
 ll.header = function(){
 
   var init = function(){
-
     headerPosition();
-
-    var myElement = document.querySelector(".sticky");
-    // construct an instance of Headroom, passing the element
-    var headroom  = new Headroom(myElement);
-    // initialise
-    headroom.init();
-
   };
 
   var headerPosition = function(){
@@ -17,6 +9,9 @@ ll.header = function(){
     var $sticky = $(".sticky");
     var stickyTop = $sticky.offset().top;
     var $stickySpacer = $(".sticky-spacer");
+
+    var headroom  = new Headroom($sticky[0]);
+    headroom.init();
 
     setStickySpacerHeight($stickySpacer, $sticky);
 
