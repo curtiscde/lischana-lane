@@ -4,6 +4,9 @@
 @color-footer:#eee;
 @color-footer-base:darken(@color-footer, 50%);
 
+@color-twitter:#0084b4;
+@color-youtube:#cc181e;
+
 footer{
   background-color:@color-footer-bg;
   padding:10px;
@@ -23,7 +26,12 @@ footer{
         text-decoration: none;
       }
 
-
+      &.twitter:hover i{
+        color:@color-twitter;
+      }
+      &.youtube:hover i{
+        color:@color-youtube;
+      }
     }
   }
 

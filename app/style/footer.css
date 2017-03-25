@@ -16,6 +16,12 @@ footer .social a {
 footer .social a:hover {
   text-decoration: none;
 }
+footer .social a.twitter:hover i {
+  color: #0084b4;
+}
+footer .social a.youtube:hover i {
+  color: #cc181e;
+}
 footer .base {
   clear: both;
   color: #6f6f6f;
