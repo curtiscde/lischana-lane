@@ -4,6 +4,12 @@ ll.header = function(){
 
     headerPosition();
 
+    var myElement = document.querySelector(".sticky");
+    // construct an instance of Headroom, passing the element
+    var headroom  = new Headroom(myElement);
+    // initialise
+    headroom.init();
+
   };
 
   var headerPosition = function(){
