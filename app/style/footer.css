@@ -26,20 +26,6 @@ footer .social a.twitter:hover i {
 footer .social a.youtube:hover i {
   color: #cc181e;
 }
-footer .map {
-  padding: 6px 3px;
-  clear: both;
-  text-align: center;
-}
-footer .map a {
-  opacity: 0.8;
-}
-footer .map a:hover {
-  opacity: 1;
-}
-footer .map a img {
-  max-width: 100%;
-}
 footer .links {
   clear: both;
   font-size: 1em;
