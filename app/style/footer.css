@@ -26,6 +26,22 @@ footer .social a.twitter:hover i {
 footer .social a.youtube:hover i {
   color: #cc181e;
 }
+footer .links {
+  clear: both;
+  font-size: 1em;
+}
+footer .links ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer .links ul li {
+  padding: 5px 0;
+}
+footer .links ul li a,
+footer .links ul li a:hover {
+  color: #9fa6ad;
+  text-decoration: none;
+}
 footer .base {
   clear: both;
   color: #5e666e;
