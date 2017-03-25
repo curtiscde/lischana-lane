@@ -15,6 +15,7 @@
     <!-- endbuild -->
 
     <link rel="stylesheet" href="lib-ext/unitegallery/css/unite-gallery.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
     <meta name="theme-color" content="#ec1c2a">
     <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1" />
@@ -57,11 +58,26 @@
     <section id="photography" ng-controller="photographyController">
       <div photoview></div>
     </section>
-    <footer>
+    <footer id="contact">
       <div class="container">
-        Lischana Lane 2017
-        <div class="version">
-          %%GULP_INJECT_VERSION%%
+        <div class="copy">
+          Lischana Lane &copy; 2017
+        </div>
+        <div class="social">
+          <a class="twitter" href="https://twitter.com/LVEL" target="_blank"><i class="icon-social-twitter icons"></i></a>
+          <a class="youtube" href="https://www.youtube.com/channel/UCQsBfg_6p1StjDIWtS4-8jA" target="_blank"><i class="icon-social-youtube icons"></i></a>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a title="Flaticon" href="http://www.flaticon.com" target="_blank">www.flaticon.com</a></li>
+            <li><a title="Freepik" href="http://www.freepik.com" target="_blank">Freepik</a></li>
+            <li><a title="Curtis Timson" href="http://www.curtistimson.co.uk" target="_blank">Curtis Timson</a></li>
+          </ul>
+        </div>
+        <div class="base">
+          <div class="version">
+            %%GULP_INJECT_VERSION%%
+          </div>
         </div>
       </div>
     </footer>

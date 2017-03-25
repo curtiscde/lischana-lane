@@ -1,9 +1,48 @@
 footer {
-  background-color: #242424;
+  background-color: #242729;
   padding: 10px;
-  color: #eee;
+  color: #9fa6ad;
   margin-top: 20px;
 }
-footer .version {
+footer .copy {
+  font-size: 1.2em;
+  float: left;
+}
+footer .social {
   float: right;
+}
+footer .social a {
+  color: #9fa6ad;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 0 4px;
+}
+footer .social a:hover {
+  text-decoration: none;
+}
+footer .social a.twitter:hover i {
+  color: #0084b4;
+}
+footer .social a.youtube:hover i {
+  color: #cc181e;
+}
+footer .links {
+  clear: both;
+  font-size: 1em;
+}
+footer .links ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer .links ul li {
+  padding: 5px 0;
+}
+footer .links ul li a,
+footer .links ul li a:hover {
+  color: #9fa6ad;
+  text-decoration: none;
+}
+footer .base {
+  clear: both;
+  color: #5e666e;
 }
