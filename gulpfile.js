@@ -34,14 +34,36 @@ gulp.task('publish', function(){
 });
 
 gulp.task('build-html', function(){
-  return gulp.src(['./app/**/*.html'], {base: 'src'})
+  return gulp.src(['./app/**/*.html'])
           .pipe(useref())
           .pipe(injectVersion())
           .pipe(gulp.dest('dist'))
         ;
 });
 
-gulp.task('build', ['build-html']);
+gulp.task('build-css', function(){
+  return gulp.src(['./app/**/*.css'])
+          .pipe(gulp.dest('dist'))
+        ;
+});
+
+gulp.task('build-js', function(){
+        return gulp.src(['./app/**/*.js'])
+                .pipe(gulp.dest('dist'))
+        ;
+});
+
+gulp.task('build-copy', function(){
+        return gulp.src(['./app/**/*.{svg,png,jpg,gif,json}'])
+                .pipe(gulp.dest('dist'))
+        ;
+});
+
+gulp.task('build', ['build-html',
+                    'build-css',
+                    'build-js',
+                    'build-copy'
+                  ]);
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
