@@ -33,6 +33,16 @@ gulp.task('publish', function(){
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('build-html', function(){
+  return gulp.src(['./app/**/*.html'], {base: 'src'})
+          .pipe(useref())
+          .pipe(injectVersion())
+          .pipe(gulp.dest('dist'))
+        ;
+});
+
+gulp.task('build', ['build-html']);
+
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
