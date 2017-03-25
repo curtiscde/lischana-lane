@@ -10,6 +10,7 @@ ll.header = function(){
     var stickyTop = $sticky.offset().top;
     var $stickySpacer = $(".sticky-spacer");
 
+
     var headroom  = new Headroom($sticky[0]);
     headroom.init();
 
@@ -17,14 +18,9 @@ ll.header = function(){
 
     $(window).on("scroll", function(){
       var wScrollTop = $(window).scrollTop();
-
-      var stickyOffScreen = false;
-
       if(stickyTop <= wScrollTop){
-        stickyOffScreen = true;
         setStickySpacerHeight($stickySpacer, $sticky);
       }
-
     });
 
   };
