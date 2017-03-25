@@ -5,7 +5,6 @@ ll.llApp = angular.module("llApp", ['ngRoute'])
 
   $scope.scrollTo = function(id) {
       $location.hash(id);
-      anchorSmoothScroll.setOffset($(".sticky-spacer").outerHeight(true));
       anchorSmoothScroll.scrollTo(id);
    };
 
