@@ -1,6 +1,9 @@
 var gulp = require("gulp");
 var less = require("gulp-less");
+var runSequence = require('run-sequence');
 var useref = require('gulp-useref');
+var cssnano = require('gulp-cssnano');
+var gulpIf = require('gulp-if');
 var ghPages = require('gulp-gh-pages');
 var bump = require('gulp-bump');
 var browserSync = require('browser-sync').create();
@@ -25,11 +28,11 @@ gulp.task("copy-npm-files", function () {
         .pipe(gulp.dest('./app/npm/'))
 });
 
-gulp.task('publish', function(){
+gulp.task('build', function(){
   return gulp.src('./app/**/**')
-     .pipe(useref())
-     .pipe(injectVersion())
-    // .pipe(gulpIf('*.css', cssnano()))
+     .pipe(gulpIf('*.html', useref()))
+     .pipe(gulpIf('*.html', injectVersion()))
+     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
 
@@ -37,8 +40,6 @@ gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
-
-
 
 // Basic usage:
 // Will patch the version
