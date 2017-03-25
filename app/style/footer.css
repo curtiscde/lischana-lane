@@ -1,14 +1,18 @@
 footer {
-  background-color: #242424;
+  background-color: #242729;
   padding: 10px;
-  color: #eee;
+  color: #9fa6ad;
   margin-top: 20px;
+}
+footer .copy {
+  font-size: 1.2em;
+  float: left;
 }
 footer .social {
   float: right;
 }
 footer .social a {
-  color: #eee;
+  color: #9fa6ad;
   font-size: 2.5em;
   display: inline-block;
   padding: 0 4px;
@@ -24,5 +28,5 @@ footer .social a.youtube:hover i {
 }
 footer .base {
   clear: both;
-  color: #6f6f6f;
+  color: #5e666e;
 }
