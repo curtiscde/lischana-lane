@@ -26,8 +26,13 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
 
   });
 
+  $scope.loadSection = function(section){
+    ga('send', 'event', 'Photo Nav', 'Click', section);
+    $scope.loadSectionList(section);
+  }
+
   $scope.loadSectionList = function(section){
-    
+
     $scope.selectedSection = section;
 
     var flickrSetId;
@@ -50,6 +55,7 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
     $http.get(flickrUrl).then(function(r){
         $scope.photos = mapPhotoJsonToModel(r.data.photoset.photo);
     });
+
   }
 
 
