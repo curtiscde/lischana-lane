@@ -5,6 +5,7 @@ ll.llApp = angular.module("llApp", ['ngRoute'])
 
   $scope.scrollTo = function(id) {
       $location.hash(id);
+      ga('send', 'event', 'Navigation', 'Click', id);
       anchorSmoothScroll.scrollTo(id);
    };
 
