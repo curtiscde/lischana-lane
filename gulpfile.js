@@ -1,17 +1,14 @@
 var gulp = require("gulp");
 var less = require("gulp-less");
-var clean = require('gulp-clean');
-var runSequence = require('run-sequence');
-var useref = require('gulp-useref');
-var cssnano = require('gulp-cssnano');
-var gulpIf = require('gulp-if');
 var ghPages = require('gulp-gh-pages');
 var bump = require('gulp-bump');
 var browserSync = require('browser-sync').create();
-var injectVersion = require('gulp-inject-version');
+var requireDir = require('require-dir');
 
 var stylePath = "app/style/**/*.less";
 var lessTask = "less";
+
+requireDir('./gulp-tasks');
 
 gulp.task(lessTask, function(){
   return gulp.src(stylePath)
@@ -29,22 +26,7 @@ gulp.task("copy-npm-files", function () {
         .pipe(gulp.dest('./app/npm/'))
 });
 
-gulp.task('build-clean', function(){
-  return gulp.src('dist', {read: false})
-        .pipe(clean());
-});
 
-gulp.task('build-files', function(){
-  return gulp.src('./app/**/**')
-     .pipe(gulpIf('*.html', useref()))
-     .pipe(gulpIf('*.html', injectVersion()))
-     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('build', function(){
-  runSequence('build-clean', 'build-files');
-});
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
