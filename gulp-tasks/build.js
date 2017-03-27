@@ -4,6 +4,7 @@ var gulpIf = require('gulp-if');
 var useref = require('gulp-useref');
 var injectVersion = require('gulp-inject-version');
 var cssnano = require('gulp-cssnano');
+var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 
 
@@ -21,6 +22,12 @@ gulp.task('build-files', function(){
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('build-config', function() {
+  return gulp.src('config/staging.js')
+             .pipe(rename('config.js'))
+             .pipe(gulp.dest('dist/scripts'));
+});
+
 gulp.task('build', function(){
-  runSequence('build-clean', 'build-files');
+  runSequence('build-clean', 'build-files', 'build-config');
 });
