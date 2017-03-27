@@ -6,6 +6,7 @@ var injectVersion = require('gulp-inject-version');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
+var argv = require('yargs').argv;
 
 
 
@@ -23,7 +24,12 @@ gulp.task('build-files', function(){
 });
 
 gulp.task('build-config', function() {
-  return gulp.src('config/staging.js')
+
+  var file = argv.prod ? "production" : "staging";
+
+  console.log("Config: " + file);
+
+  return gulp.src('config/' + file + '.js')
              .pipe(rename('config.js'))
              .pipe(gulp.dest('dist/scripts'));
 });
