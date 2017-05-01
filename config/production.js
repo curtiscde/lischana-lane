@@ -5,6 +5,6 @@ ll.config = {
     userId:"81674685@N04"
   },
   googleAnalytics:{
-    accountNumber: 'PRODUCTION-ACCOUNT'
+    accountNumber: 'UA-96217691-3'
   }
 };
