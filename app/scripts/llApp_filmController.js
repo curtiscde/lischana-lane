@@ -5,9 +5,9 @@ ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce) {
 
     $scope.films = mapFilmJsonToModel(response.data.films);
 
-    console.log($scope.films);
 
     setTimeout(function(){
+    $("#film-list.list.loading").removeClass("loading");
     $("#film-list").unitegallery();
   },2000);
 
@@ -35,7 +35,7 @@ ll.llApp.directive("filmview", function($timeout){
     return {
       templateUrl: 'film.html',
       link: function($scope, element, attrs){
-      
+
       }
     };
 });

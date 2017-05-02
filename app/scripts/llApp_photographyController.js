@@ -20,6 +20,7 @@ ll.llApp.controller('photographyController', function($scope, $routeParams, $htt
     setTimeout(function(){
       if ($buffer.find("img").length){
         $gallery.empty().append($buffer.html());
+        $gallery.removeClass("loading");
         $gallery.unitegallery();
       }
     }, 1000);
