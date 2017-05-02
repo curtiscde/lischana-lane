@@ -31,6 +31,12 @@ section ul.sub-menu li a:hover {
 section .list {
   padding-top: 20px;
 }
+section .list.loading {
+  background-image: url(../images/ring.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 150px;
+}
 .film-list {
   padding: 1em 0;
 }
