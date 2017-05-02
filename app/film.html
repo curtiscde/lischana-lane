@@ -1,10 +1,12 @@
 <div class="container">
   <h2>Film</h2>
   <div id="film-list" class="list loading">
-      <div ng-repeat="film in films"
+      <img ng-repeat="film in films"
           alt="{{film.name}}"
 				    data-type="youtube"
 				     data-videoid="{{film.videoid}}"
-             data-title="{{film.name}}"></div>
+             data-title="{{film.name}}"
+             src="https://img.youtube.com/vi/{{film.videoid}}/hqdefault.jpg"
+             data-image="https://img.youtube.com/vi/{{film.videoid}}/hqdefault.jpg" />
   </div>
 </div>

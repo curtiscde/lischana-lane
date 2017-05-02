@@ -37,6 +37,10 @@ section .list.loading {
   background-position: center center;
   min-height: 150px;
 }
+section .list.loading img {
+  visibility: hidden;
+  height: 0;
+}
 .film-list {
   padding: 1em 0;
 }
