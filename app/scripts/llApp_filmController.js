@@ -1,10 +1,9 @@
-ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce, filmService) {
+ll.llApp.controller('filmController', function($scope, $http, $timeout, filmService) {
 
   filmService.getFilmData(function(response){
     console.log(response.data.films); //TODO: Remove
 
-    $scope.films = mapFilmJsonToModel(response.data.films);
-
+    $scope.films = filmService.mapFilmJsonToModel(response.data.films);
 
     setTimeout(function(){
       $("#film-list.list.loading").removeClass("loading");
@@ -12,20 +11,6 @@ ll.llApp.controller('filmController', function($scope, $http, $timeout, $sce, fi
     },2000);
 
   });
-
-  var mapFilmJsonToModel = function(data){
-    var films = [];
-    for(let i = 0; i<data.length; i++){
-      let film = data[i];
-      films.push({
-        name: film.name,
-        src: $sce.trustAsResourceUrl(film.src),
-        videoid: film.videoid,
-        type: film.type
-      });
-    }
-    return films;
-  };
 
 });
 
