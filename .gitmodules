@@ -1,0 +1,3 @@
+[submodule "themes/creative"]
+	path = themes/creative
+	url = https://github.com/digitalcraftsman/hugo-creative-theme.git
