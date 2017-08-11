@@ -49,7 +49,7 @@ theme = "creative"
 	[params.about]
 		headline    = "Fired-up Photography!"
 		description = "Capturing the magic of a big day isn't easy - I pride myself in looking past the 'kodak moment' and creating images that really show the people, places and emotions that make that special day so special."
-		buttonText  = "Get started!"
+		buttonText  = "Get in touch!"
 
 
 	# Service section
