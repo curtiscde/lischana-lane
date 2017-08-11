@@ -104,3 +104,6 @@ theme = "creative"
 	# 	latitude  = "34.007850"
 	# 	longitude = "-118.499305"
 	# 	maps_api_key = ""
+
+	[params.analytics]
+		gaaccount = 'UA-96217691-1'
