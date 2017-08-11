@@ -22,8 +22,8 @@
                             <p>{{ . | markdownify }}</p>
                         {{ end }}
 
-                        {{ if .galleryDivId }}
-                        <div id="{{ .galleryDivId }}" class="flickr-gallery" data-flickrid="{{ .flickrId }}" style="display:none;"></div>
+                        {{ if .flickrId }}
+                        <div id="gallery-{{ .modalID }}" class="flickr-gallery" data-flickrid="{{ .flickrId }}" style="display:none;"></div>
                         {{ end }}
                         {{ if .videos }}
                         <div id="unite-videos" style="display:none;">
@@ -39,27 +39,6 @@
 
                         </div>
                         {{ end }}
-                        <!-- <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
-
-                        {{ if or .client .date .category }}
-                            <ul class="list-inline item-details">
-                                {{ if .client }}
-                                    <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}: {{ end }}
-                                        <strong><a href="{{ with .clientLink }}{{ . }}{{ else }}#{{ end }}">{{ .client }}</a></strong>
-                                    </li>
-                                {{ end }}
-                                {{ if .date }}
-                                    <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}: {{ end }}
-                                        <strong><a href="#">{{ .date }}</a></strong>
-                                    </li>
-                                {{ end }}
-                                {{ if .category }}
-                                    <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}: {{ end }}
-                                        <strong><a href="#">{{ .category }}</a></strong>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        {{ end }} -->
                         {{ with $.Site.Params.portfolio.modal.buttonText }}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>
                         {{ end }}

@@ -1,10 +1,6 @@
-modalID: 1
-title: Wedding
-date: 2014-07-05
-img: 1.jpg
-client: Start Bootstrap
-clientLink: "#"
-category: Web Development
-galleryDivId: gallery-wedding
-flickrId: 72157679280793261
+modalID: 4
+title: Portrait
+img: 5.jpg
+category: Photography
+flickrId: 72157684962761823
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit.
