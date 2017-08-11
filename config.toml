@@ -94,10 +94,10 @@ theme = "creative"
 
 	# Contact section
 	[params.contact]
-		headline = "Let's Get In Touch!"
+		headline = "Get In Touch!"
 		description = "Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!"
-		phone = "123-456-6789"
-		email = "feedback@startbootstrap.com"
+		twitter = "LVEL"
+		linkedin = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
 
 	# Google Maps section
 	# [params.location]
