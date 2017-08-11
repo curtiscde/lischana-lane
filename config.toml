@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Lischana Lane"
-baseURL = "http://example.org/"
+baseURL = "http://lischana-lane.co.uk/"
 theme = "creative"
 
 [params]
