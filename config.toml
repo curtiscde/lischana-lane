@@ -23,7 +23,7 @@ theme = "creative"
 	description = "Your description"
 
 	# The path must be relative to the static folder
-	favicon = "favicon.ico"
+	favicon = "https://s.gravatar.com/avatar/784dc9d50d2d4ef433dda5ceb6a68927?s=16"
 
 
 	# Navigation
