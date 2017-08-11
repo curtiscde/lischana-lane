@@ -14,6 +14,7 @@
 
       loadFlickrData(flickrId, function(data){
         bindFlickrData($this, data);
+        bindGalleryLoad(divId);
       });
 
     });
@@ -33,8 +34,8 @@
     };
   };
 
-  var bindGalleryLoad = function(){
-    $('#gallery').unitegallery();
+  var bindGalleryLoad = function(flickrGalleryId){
+    $('#' + flickrGalleryId).unitegallery();
   };
 
   var loadFlickrData = function(flickrId, callback){
