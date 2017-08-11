@@ -1,8 +1,8 @@
 {
   "name": "lischana-lane",
-  "version": "1.1.1",
-  "description": "Lischana Lane Photography Website",
-  "main": "index.html",
+  "version": "2.0.0",
+  "description": "Lischana Lane Photography Site",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,28 +16,9 @@
     "url": "https://github.com/CurtTimson/lischana-lane/issues"
   },
   "homepage": "https://github.com/CurtTimson/lischana-lane#readme",
-  "dependencies": {
-    "gulp-bump": "^2.7.0",
-    "headroom.js": "^0.9.3",
-    "jquery": "^3.1.1"
-  },
   "devDependencies": {
-    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-cssnano": "^2.1.2",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-if": "^2.0.2",
-    "gulp-inject-version": "^1.0.1",
-    "gulp-less": "^3.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-useref": "^3.1.2",
-    "jasmine-core": "^2.6.2",
-    "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-jasmine": "^1.1.0",
-    "require-dir": "^0.3.1",
-    "run-sequence": "^1.2.2",
-    "yargs": "^7.0.2"
+    "require-dir": "^0.3.2"
   }
 }

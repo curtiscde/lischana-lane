@@ -1,0 +1,109 @@
+languageCode = "en-us"
+title = "Lischana Lane"
+baseURL = "http://lischana-lane.co.uk/"
+theme = "creative"
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# most longer texts.
+
+	# All icons using Fontawesome's icon font. Look at http://fontawesome.io/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# All projects of the portfolio are defined in their own files.
+	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
+	# folder into the 'data' directory at the root of this Hugo site.
+	# For more information take a look at the README.
+
+	# To provide some metadata for search engines feel free to add some
+	# information about you and your website.
+	name = "Lischana Lane"
+	description = "Your description"
+
+	# The path must be relative to the static folder
+	favicon = "https://s.gravatar.com/avatar/784dc9d50d2d4ef433dda5ceb6a68927?s=16"
+
+
+	# Navigation
+	[params.navigation]
+		brand = "Lischana Lane"
+
+		[params.navigation.links]
+			about     = "About"
+			services  = "Services"
+			portfolio = "Portfolio"
+			contact   = "Contact"
+
+
+	# Hero section
+	[params.hero]
+		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+		slogan     = "Lischana Lane"
+		subtitle   = "Photographer, Filmmaker and Media Lecturer based in London."
+		buttonText = "Find out more"
+
+
+	# About section
+	[params.about]
+		headline    = "Fired-up Photography!"
+		description = "Capturing the magic of a big day isn't easy - I pride myself in looking past the 'kodak moment' and creating images that really show the people, places and emotions that make that special day so special."
+		buttonText  = "Get in touch!"
+
+
+	# Service section
+	[params.services]
+		headline = "At your service"
+
+        [[params.services.list]]
+            icon = "fa-camera"
+            title = "Sturdy Templates"
+            description = "Our templates are updated regularly so they don't break."
+
+        [[params.services.list]]
+			icon = "fa-desktop"
+			title = "Ready to Ship"
+			description = "You can use this theme as is, or you can make changes!"
+
+		[[params.services.list]]
+            icon = "fa-handshake-o"
+            title = "Up to Date"
+            description = "We update dependencies to keep things fresh."
+
+        [[params.services.list]]
+            icon = "fa-heart"
+            title = "Made with Love"
+            description = "For my clients, for arts sake, for the love of it!"
+
+
+    # Portfolio modals
+	[params.portfolio.modal]
+        client = "Client"
+        date = "Date"
+        category = "Category"
+        buttonText = "Close"
+
+    # Aside section
+	[params.aside]
+		headline = "Get the Creative Theme for Hugo"
+
+		[params.aside.button]
+			text = "Download now"
+			link = "//github.com/digitalcraftsman/hugo-creative-theme"
+
+	# Contact section
+	[params.contact]
+		headline = "Get In Touch!"
+		description = "Contact me via Twitter or linkedIn below!"
+		twitter = "LVEL"
+		linkedin = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
+
+	# Google Maps section
+	# [params.location]
+	# 	latitude  = "34.007850"
+	# 	longitude = "-118.499305"
+	# 	maps_api_key = ""
+
+	[params.analytics]
+		gaaccount = 'UA-96217691-1'
