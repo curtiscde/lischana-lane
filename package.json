@@ -1,0 +1,19 @@
+{
+  "name": "lischana-lane",
+  "version": "2.0.0",
+  "description": "Lischana Lane Photography Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurtTimson/lischana-lane.git"
+  },
+  "author": "Curtis Timson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CurtTimson/lischana-lane/issues"
+  },
+  "homepage": "https://github.com/CurtTimson/lischana-lane#readme"
+}
