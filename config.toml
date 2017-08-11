@@ -47,8 +47,8 @@ theme = "creative"
 
 	# About section
 	[params.about]
-		headline    = "We've got what you need!"
-		description = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Praesentium similique eos eligendi error veritatis harum, sed aliquid totam, quam minus neque enim est architecto, ad. Maiores, aliquid, vitae!"
+		headline    = "Fired-up Photography!"
+		description = "Capturing the magic of a big day isn't easy - I pride myself in looking past the 'kodak moment' and creating images that really show the people, places and emotions that make that special day so special."
 		buttonText  = "Get started!"
 
 
