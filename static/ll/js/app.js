@@ -19,6 +19,8 @@
 
     });
 
+    $('#unite-videos').unitegallery();
+
   };
 
   var bindFlickrData = function($flickrGallery, data){

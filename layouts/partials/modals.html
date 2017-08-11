@@ -22,8 +22,23 @@
                             <p>{{ . | markdownify }}</p>
                         {{ end }}
 
+                        {{ if .galleryDivId }}
                         <div id="{{ .galleryDivId }}" class="flickr-gallery" data-flickrid="{{ .flickrId }}" style="display:none;"></div>
+                        {{ end }}
+                        {{ if .videos }}
+                        <div id="unite-videos" style="display:none;">
 
+                          {{ range $.Site.Data.videos }}
+                          <img alt="{{ .name }}"
+                              data-type="youtube"
+                              data-videoid="{{ .videoid }}"
+                              data-title="{{ .name }}"
+                              src="https://img.youtube.com/vi/{{ .videoid }}/hqdefault.jpg"
+                              data-image="https://img.youtube.com/vi/{{ .videoid }}/hqdefault.jpg" />
+                          {{ end }}
+
+                        </div>
+                        {{ end }}
                         <!-- <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
 
                         {{ if or .client .date .category }}
