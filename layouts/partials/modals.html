@@ -18,10 +18,24 @@
                         {{ if and .title .description }}
                             <hr class="star-primary">
                         {{ end }}
-                        <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
                         {{ with .description }}
                             <p>{{ . | markdownify }}</p>
                         {{ end }}
+
+                        <div id="{{ .galleryDivId }}" style="display:none;">
+
+                    			<img alt="Image 1 Title" src="https://farm3.staticflickr.com/2843/33286451286_c47d4797f2.jpg"
+                    				data-image="https://farm3.staticflickr.com/2843/33286451286_1b413eb373_o.jpg"
+                    				data-description="Image 1 Description">
+
+                    			<img alt="Image 2 Title" src="https://farm3.staticflickr.com/2840/33235918741_ef722f50c0.jpg"
+                    				data-image="https://farm3.staticflickr.com/2840/33235918741_d1e105ef80_o.jpg"
+                    				data-description="Image 2 Description">
+
+                    		</div>
+
+                        <!-- <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
+
                         {{ if or .client .date .category }}
                             <ul class="list-inline item-details">
                                 {{ if .client }}
@@ -40,7 +54,7 @@
                                     </li>
                                 {{ end }}
                             </ul>
-                        {{ end }}
+                        {{ end }} -->
                         {{ with $.Site.Params.portfolio.modal.buttonText }}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>
                         {{ end }}
