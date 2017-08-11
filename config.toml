@@ -1,5 +1,5 @@
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Lischana Lane"
 baseURL = "http://example.org/"
 theme = "creative"
 
@@ -19,7 +19,7 @@ theme = "creative"
 
 	# To provide some metadata for search engines feel free to add some
 	# information about you and your website.
-	name = "Your name"
+	name = "Lischana Lane"
 	description = "Your description"
 
 	# The path must be relative to the static folder
@@ -41,7 +41,7 @@ theme = "creative"
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		slogan     = "Lischana Lane"
-		subtitle   = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nesciunt consequatur ut nihil voluptatem fugiat eos eveniet alias in veniam?"
+		subtitle   = "Photographer, Filmmaker and Media Lecturer based in London."
 		buttonText = "Find out more"
 
 
