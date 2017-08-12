@@ -58,23 +58,23 @@ theme = "creative"
 
         [[params.services.list]]
             icon = "fa-camera"
-            title = "Sturdy Templates"
+            title = "Hardware"
             description = "Our templates are updated regularly so they don't break."
 
         [[params.services.list]]
 			icon = "fa-desktop"
-			title = "Ready to Ship"
+			title = "Software"
 			description = "You can use this theme as is, or you can make changes!"
 
-		[[params.services.list]]
-            icon = "fa-handshake-o"
-            title = "Up to Date"
-            description = "We update dependencies to keep things fresh."
-
         [[params.services.list]]
-            icon = "fa-heart"
+            icon = "fa-graduation-cap"
             title = "Made with Love"
             description = "For my clients, for arts sake, for the love of it!"
+
+						[[params.services.list]]
+										icon = "fa-handshake-o"
+										title = "Up to Date"
+										description = "We update dependencies to keep things fresh."
 
 
     # Portfolio modals
