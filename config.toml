@@ -32,7 +32,7 @@ theme = "creative"
 
 		[params.navigation.links]
 			about     = "About"
-			services  = "Services"
+			services  = "Skillset"
 			portfolio = "Portfolio"
 			contact   = "Contact"
 
@@ -47,36 +47,34 @@ theme = "creative"
 
 	# About section
 	[params.about]
-		headline    = "Fired-up Photography!"
-		description = "Capturing the magic of a big day isn't easy - I pride myself in looking past the 'kodak moment' and creating images that really show the people, places and emotions that make that special day so special."
+		headline    = "About Lischana"
+		description = "Lischana Lane (Far left) was awarded 2nd place for support staff of the year 2017 (North Warwickshire & Hinckley College), won the 2013 Vaughan award for best moving image (Birmingham Institute of Art & Design) and was runner up in the 2009 Harman photo Student Competition."
 		buttonText  = "Get in touch!"
 
 
 	# Service section
 	[params.services]
-		headline = "At your service"
+		headline = "Skillset"
 
 		[[params.services.list]]
 				icon = "fa-graduation-cap"
-				title = "Made with Love"
-				description = "For my clients, for arts sake, for the love of it!"
+				title = "Academic"
+				description = "Diploma in Education and Training, BA (Hons) Visual Communication, Diploma in Art & Design. Safeguarding, Equality & Diversity and Prevent trained."
 
-        [[params.services.list]]
-            icon = "fa-camera"
-            title = "Hardware"
-            description = "Our templates are updated regularly so they don't break."
+    [[params.services.list]]
+        icon = "fa-camera"
+        title = "Practical"
+        description = "Digital photography & filmmaking. Location and studio, creative and commercial."
 
-        [[params.services.list]]
-			icon = "fa-desktop"
-			title = "Software"
-			description = "You can use this theme as is, or you can make changes!"
+    [[params.services.list]]
+				icon = "fa-desktop"
+				title = "Digital photography & filmmaking. Location and studio, creative and commercial."
+				description = "You can use this theme as is, or you can make changes!"
 
-
-
-						[[params.services.list]]
-										icon = "fa-handshake-o"
-										title = "Up to Date"
-										description = "We update dependencies to keep things fresh."
+		[[params.services.list]]
+				icon = "fa-handshake-o"
+				title = "Up to Date"
+				description = "We update dependencies to keep things fresh."
 
 
     # Portfolio modals
