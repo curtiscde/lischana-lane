@@ -9,6 +9,7 @@
                 {{ if and .Site.Params.about.headline .Site.Params.about.description }}
                     <hr class="light">
                 {{ end }}
+                <img src="img/NWHCsupportstaffoftheyear.jpg" alt="{{ .Site.Params.name }}" class="img-responsive" style="margin:0 auto 20px auto;" />
                 {{ with .Site.Params.about.description }}
                     <p class="text-faded">{{ . | markdownify }}</p>
                 {{ end }}
