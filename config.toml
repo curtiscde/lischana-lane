@@ -59,7 +59,7 @@ theme = "creative"
 		[[params.services.list]]
 				icon = "fa-graduation-cap"
 				title = "Academic"
-				description = "Diploma in Education and Training, BA (Hons) Visual Communication, Diploma in Art & Design. Safeguarding, Equality & Diversity and Prevent trained."
+				description = "DTTLS, BA (Hons) Visual Communication, Diploma in Art & Design."
 
     [[params.services.list]]
         icon = "fa-camera"
@@ -68,13 +68,13 @@ theme = "creative"
 
     [[params.services.list]]
 				icon = "fa-desktop"
-				title = "Digital photography & filmmaking. Location and studio, creative and commercial."
-				description = "You can use this theme as is, or you can make changes!"
+				title = "Technical"
+				description = "Adobe Creative Cloud, Final Cut Pro and Aperture."
 
 		[[params.services.list]]
 				icon = "fa-handshake-o"
-				title = "Up to Date"
-				description = "We update dependencies to keep things fresh."
+				title = "Human"
+				description = "Using inclusivity, motivation and enthusiasm to provide engaging delivery."
 
 
     # Portfolio modals
