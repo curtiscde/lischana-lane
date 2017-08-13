@@ -41,7 +41,7 @@ theme = "creative"
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		slogan     = "Lischana Lane"
-		subtitle   = "Photographer, Filmmaker and Media Lecturer based in London."
+		subtitle   = "Media Lecturer, Photographer and Filmmaker based in London"
 		buttonText = "Find out more"
 
 
@@ -56,6 +56,11 @@ theme = "creative"
 	[params.services]
 		headline = "At your service"
 
+		[[params.services.list]]
+				icon = "fa-graduation-cap"
+				title = "Made with Love"
+				description = "For my clients, for arts sake, for the love of it!"
+
         [[params.services.list]]
             icon = "fa-camera"
             title = "Hardware"
@@ -66,10 +71,7 @@ theme = "creative"
 			title = "Software"
 			description = "You can use this theme as is, or you can make changes!"
 
-        [[params.services.list]]
-            icon = "fa-graduation-cap"
-            title = "Made with Love"
-            description = "For my clients, for arts sake, for the love of it!"
+
 
 						[[params.services.list]]
 										icon = "fa-handshake-o"
