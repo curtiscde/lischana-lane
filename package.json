@@ -1,6 +1,6 @@
 {
   "name": "lischana-lane",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Lischana Lane Photography Site",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
     "require-dir": "^0.3.2"
+  },
+  "dependencies": {
+    "lastfm-nowplaying": "^1.4.0"
   }
 }

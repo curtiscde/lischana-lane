@@ -1,3 +1,12 @@
+.lastfm-nowplaying .container.lastfm-content{
+  font-size: 1.2em;
+}
+
+.lastfm-nowplaying .container.lastfm-content h3{
+  line-height: normal;
+  margin: 0 0 1em;
+}
+
 footer{
   border-top:1px solid rgba(34,34,34,.05);
   padding: 10px 15px;
