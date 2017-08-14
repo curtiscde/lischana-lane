@@ -1,11 +1,10 @@
-.lastfm-content{
-  max-width: 1200px;
-  margin: 0 auto 4em;
+.lastfm-nowplaying .container.lastfm-content{
+  font-size: 1.2em;
 }
 
-.lastfm-content h3{
-  text-transform: uppercase;
-  font-size: 1.2em;
+.lastfm-nowplaying .container.lastfm-content h3{
+  line-height: normal;
+  margin: 0 0 1em;
 }
 
 footer{
