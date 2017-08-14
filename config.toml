@@ -86,18 +86,18 @@ theme = "creative"
 
     # Aside section
 	[params.aside]
-		headline = "Get the Creative Theme for Hugo"
+		headline = "Get in Touch!"
 
 		[params.aside.button]
-			text = "Download now"
-			link = "//github.com/digitalcraftsman/hugo-creative-theme"
+			text = "LinkedIn"
+			link = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
 
 	# Contact section
 	[params.contact]
-		headline = "Get In Touch!"
-		description = "Contact me via Twitter or LinkedIn below!"
+		headline = "Follow Me"
+		description = "Follow me on Twitter or YouTube below!"
 		twitter = "LVEL"
-		linkedin = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
+		youtube = "https://www.youtube.com/channel/UCQsBfg_6p1StjDIWtS4-8jA"
 
 	# Google Maps section
 	# [params.location]
