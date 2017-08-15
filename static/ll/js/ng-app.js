@@ -1,4 +1,4 @@
-angular.module('ll', ['lastfm-nowplaying'])
+angular.module('ll', ['ll.tweet', 'lastfm-nowplaying'])
   .controller('mainCtrl', ['$scope', function($scope){
 
       $scope.lastFmConfig = {
@@ -8,3 +8,8 @@ angular.module('ll', ['lastfm-nowplaying'])
       };
 
   }]);
+
+angular.module('ll.tweet', [])
+  .controller('tweetController', function(){
+
+  });
