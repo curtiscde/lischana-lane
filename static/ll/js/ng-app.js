@@ -20,11 +20,17 @@ angular.module('ll', ['ll.tweet', 'lastfm-nowplaying'])
   });
 
 angular.module('ll.tweet', [])
-  .factory('tweetService', function($q){
+  .factory('tweetService', function($q, $http){
+
+    var tweetUrl = 'https://lischana-lane-tweet.herokuapp.com/latest-tweet';
 
     var getTweet = function(){
 
       var defer = $q.defer();
+
+      $http.get(tweetUrl).then(function(data){
+        console.log(data);
+      });
 
       defer.resolve('foo4');
 
