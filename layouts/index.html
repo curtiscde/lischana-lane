@@ -27,7 +27,7 @@
         {{ if .Site.Params.location }}
             {{ partial "location.html" . }}
         {{ end }}
-
+        <div ng-app="ll" ng-controller="mainCtrl">
         {{ if .Site.Params.aside }}
             {{ partial "aside.html" . }}
         {{ end }}
@@ -35,7 +35,7 @@
         {{ if .Site.Params.contact }}
             {{ partial "contact.html" . }}
         {{ end }}
-
+        </div>
         {{ if .Site.Data.projects }}
             {{ partial "modals.html" . }}
         {{ end }}
