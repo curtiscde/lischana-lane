@@ -1,10 +1,9 @@
-angular.module('ll', ['ll.tweet', 'lastfm-nowplaying'])
-  .controller('mainCtrl', ['$scope', 'tweetService', function($scope, tweetService){
+angular.module('ll', ['ll.tweet', 'lastfm-nowplaying', 'ngSanitize'])
+  .controller('mainCtrl', ['$scope', '$sce', 'tweetService', function($scope, $sce, tweetService){
 
       tweetService.getTweet().then(function(data){
-        $scope.tweet = data;
+        $scope.tweet = $sce.trustAsHtml(data);
       });
-      $scope.tweet = tweetService.getTweet();
 
       $scope.lastFmConfig = {
         apiKey: 'f3c3bb60dc23d1431a15c557e1db8de6',
@@ -12,12 +11,7 @@ angular.module('ll', ['ll.tweet', 'lastfm-nowplaying'])
         containerClass: 'container lastfm-content'
       };
 
-  }])
-  .directive('tweetdir', function(){
-   return {
-     template: '{{tweet}}'
-   };
-  });
+  }]);
 
 angular.module('ll.tweet', [])
   .factory('tweetService', function($q, $http){
@@ -29,10 +23,8 @@ angular.module('ll.tweet', [])
       var defer = $q.defer();
 
       $http.get(tweetUrl).then(function(data){
-        console.log(data);
+        defer.resolve(data.data.tweet.html);
       });
-
-      defer.resolve('foo4');
 
       return defer.promise;
     }

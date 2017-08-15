@@ -3,7 +3,7 @@
     <div class="container text-center">
         <div class="call-to-action">
             <h2><i class="fa fa-twitter" aria-hidden="true"></i></h2>
-            <p tweetdir></p>
+            <p ng-bind-html="tweet"></p>
             <a href="{{ .Site.Params.aside.button.link }}" class="btn btn-default btn-xl wow tada">{{ .Site.Params.aside.button.text }}</a>
         </div>
     </div>
