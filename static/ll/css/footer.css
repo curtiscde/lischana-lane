@@ -1,3 +1,7 @@
+aside h2 i.fa{
+  font-size: 2em;
+}
+
 .lastfm-nowplaying .container.lastfm-content{
   font-size: 1.2em;
 }

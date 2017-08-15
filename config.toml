@@ -48,7 +48,7 @@ theme = "creative"
 	# About section
 	[params.about]
 		headline    = "About Lischana"
-		description = "Lischana Lane (Far left) was awarded 2nd place for support staff of the year 2017 (North Warwickshire & Hinckley College), won the 2013 Vaughan award for best moving image (Birmingham Institute of Art & Design) and was runner up in the 2009 Harman photo Student Competition."
+		description = "Lischana Lane (Far left) was born in the Midlands and has recently moved with her partner Curtis to Greenwich to teach Photography. She was awarded 2nd place for support staff of the year 2017 (North Warwickshire & Hinckley College), won the 2013 Vaughan award for best moving image (Birmingham Institute of Art & Design) and was runner up in the 2009 Harman photo Student Competition."
 		buttonText  = "Get in touch!"
 
 
@@ -86,17 +86,18 @@ theme = "creative"
 
     # Aside section
 	[params.aside]
-		headline = "Get in Touch!"
+
 
 		[params.aside.button]
-			text = "LinkedIn"
-			link = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
+			text = "Follow @LVEL"
+			link = "http://www.twitter.com/LVEL"
+			#link = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
 
 	# Contact section
 	[params.contact]
-		headline = "Follow Me"
-		description = "Follow me on Twitter or YouTube below!"
-		twitter = "LVEL"
+		headline = "Get In Touch!"
+		description = "Find out more below"
+		linkedin = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
 		youtube = "https://www.youtube.com/channel/UCQsBfg_6p1StjDIWtS4-8jA"
 
 	# Google Maps section
