@@ -1,5 +1,10 @@
 angular.module('ll', ['ll.tweet', 'lastfm-nowplaying'])
-  .controller('mainCtrl', ['$scope', function($scope){
+  .controller('mainCtrl', ['$scope', 'tweetService', function($scope, tweetService){
+
+      tweetService.getTweet().then(function(data){
+        $scope.tweet = data;
+      });
+      $scope.tweet = tweetService.getTweet();
 
       $scope.lastFmConfig = {
         apiKey: 'f3c3bb60dc23d1431a15c557e1db8de6',
@@ -7,9 +12,26 @@ angular.module('ll', ['ll.tweet', 'lastfm-nowplaying'])
         containerClass: 'container lastfm-content'
       };
 
-  }]);
+  }])
+  .directive('tweetdir', function(){
+   return {
+     template: '{{tweet}}'
+   };
+  });
 
 angular.module('ll.tweet', [])
-  .controller('tweetController', function(){
+  .factory('tweetService', function($q){
 
+    var getTweet = function(){
+
+      var defer = $q.defer();
+
+      defer.resolve('foo4');
+
+      return defer.promise;
+    }
+
+    return {
+      getTweet: getTweet
+    };
   });
