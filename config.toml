@@ -89,8 +89,9 @@ theme = "creative"
 		headline = "Get in Touch!"
 
 		[params.aside.button]
-			text = "LinkedIn"
-			link = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
+			text = "Follow @LVEL"
+			link = "http://www.twitter.com/LVEL"
+			#link = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
 
 	# Contact section
 	[params.contact]
