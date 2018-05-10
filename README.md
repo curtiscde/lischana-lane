@@ -2,7 +2,7 @@
 
 A portfolio website built using Hugo static site generator to present a Lecturer / Photographer's skills and experience.
 
-http://lischana-lane.co.uk
+https://lischana-lane.co.uk
 
 -------------
 
@@ -11,3 +11,8 @@ http://lischana-lane.co.uk
 ```
 hugo --config config-prod.toml
 ```
+
+
+----------------
+
+https://curtistimson.co.uk/post/project/lischana-lane-photography/
