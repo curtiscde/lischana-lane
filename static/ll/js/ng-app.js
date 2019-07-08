@@ -1,17 +1,11 @@
-angular.module('ll', ['ll.tweet', 'lastfm-nowplaying', 'ngSanitize'])
-  .controller('mainCtrl', ['$scope', '$sce', 'tweetService', function($scope, $sce, tweetService){
+angular.module('ll', ['ll.tweet', 'ngSanitize'])	
+  .controller('mainCtrl', ['$scope', '$sce', 'tweetService', function($scope, $sce, tweetService){	
 
-      tweetService.getTweet().then(function(data){
-        $scope.tweet = $sce.trustAsHtml(data);
+       tweetService.getTweet().then(function(data){	
+        $scope.tweet = $sce.trustAsHtml(data);	
       });
 
-      $scope.lastFmConfig = {
-        apiKey: 'f3c3bb60dc23d1431a15c557e1db8de6',
-        user: 'lvel',
-        containerClass: 'container lastfm-content'
-      };
-
-  }]);
+   }]);
 
 angular.module('ll.tweet', [])
   .factory('tweetService', function($q, $http){
