@@ -107,4 +107,4 @@ theme = "creative"
 	# 	maps_api_key = ""
 
 	[params.analytics]
-		gaaccount = 'UA-96217691-1'
+		gaaccount = 'UA-96217691-3'
