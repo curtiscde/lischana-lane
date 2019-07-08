@@ -1,3 +1,12 @@
+angular.module('ll', ['ll.tweet', 'ngSanitize'])	
+  .controller('mainCtrl', ['$scope', '$sce', 'tweetService', function($scope, $sce, tweetService){	
+
+       tweetService.getTweet().then(function(data){	
+        $scope.tweet = $sce.trustAsHtml(data);	
+      });
+
+   }]);
+
 angular.module('ll.tweet', [])
   .factory('tweetService', function($q, $http){
 
