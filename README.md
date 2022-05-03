@@ -8,11 +8,11 @@ https://lischana-lane.co.uk
 
 ## Deployment
 
-```
-hugo --config config-prod.toml
+```shell
+$ hugo --minify --config config-prod.toml
 ```
 
 
 ----------------
 
-https://curtistimson.co.uk/post/project/lischana-lane-photography/
+https://www.curtiscode.dev/post/project/lischana-lane-photography
