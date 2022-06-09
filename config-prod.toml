@@ -86,12 +86,9 @@ theme = "hugo-creative-theme"
 
     # Aside section
 	[params.aside]
-
-
 		[params.aside.button]
-			text = "Follow @LVEL"
-			link = "http://www.twitter.com/LVEL"
-			#link = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
+			text = "@lischana_lane"
+			link = "https://www.instagram.com/lischana_lane"
 
 	# Contact section
 	[params.contact]
