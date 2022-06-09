@@ -1,20 +1,14 @@
 {
   "name": "lischana-lane",
   "description": "Lischana Lane Photography Site",
-  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CurtTimson/lischana-lane.git"
+    "url": "git+https://github.com/curtiscde/lischana-lane.git"
   },
   "author": "Curtis Timson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CurtTimson/lischana-lane/issues"
+    "url": "https://github.com/curtiscde/lischana-lane/issues"
   },
-  "homepage": "https://github.com/CurtTimson/lischana-lane#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-gh-pages": "^0.5.4",
-    "require-dir": "^0.3.2"
-  }
+  "homepage": "https://github.com/curtiscde/lischana-lane#readme"
 }
