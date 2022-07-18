@@ -5,6 +5,7 @@ import Head from 'next/head';
 import React from 'react';
 import { ContentfulResponse } from '../types/ContentfulResponse';
 import { SocialLink } from '../types/SocialLink';
+import { getContent } from '../util/getContent';
 
 interface HomeProps {
   socialLinks: SocialLink[];
@@ -166,17 +167,11 @@ export async function getStaticProps() {
     CONTENTFUL_ACCESS_TOKEN: accessToken,
   } = process.env;
 
-  const res = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/environments/master/entries/?access_token=${accessToken}`);
+  if (!spaceId || !accessToken) {
+    throw new Error('missing spaceid or access token');
+  }
 
-  const socialLinks: SocialLink[] = (await res.json() as ContentfulResponse).items
-    .filter((item) => item.sys.contentType.sys.id === 'social')
-    .map((item) => ({
-      icon: item.fields.icon,
-      type: item.fields.type,
-      order: item.fields.order,
-      url: item.fields.url,
-    }))
-    .sort((a, b) => a.order - b.order);
+  const socialLinks: SocialLink[] = await getContent({ spaceId, accessToken });
 
   return {
     props: {
