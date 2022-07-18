@@ -3,7 +3,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { ContentfulResponse } from '../types/ContentfulResponse';
+import { ContentfulContent } from '../types/ContentfulContent';
 import { SocialLink } from '../types/SocialLink';
 import { getContent } from '../util/getContent';
 
@@ -171,7 +171,8 @@ export async function getStaticProps() {
     throw new Error('missing spaceid or access token');
   }
 
-  const socialLinks: SocialLink[] = await getContent({ spaceId, accessToken });
+  const content: ContentfulContent = await getContent({ spaceId, accessToken });
+  const { socialLinks } = content;
 
   return {
     props: {

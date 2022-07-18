@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { ContentfulContent } from '../types/ContentfulContent';
 import { ContentfulResponse } from '../types/ContentfulResponse';
 import { SocialLink } from '../types/SocialLink';
 
@@ -9,7 +10,7 @@ interface GetContentProps {
 
 export const getContent = async (
   { spaceId, accessToken }: GetContentProps,
-): Promise<SocialLink[]> => {
+): Promise<ContentfulContent> => {
   const res = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/environments/master/entries/?access_token=${accessToken}`);
 
   const socialLinks: SocialLink[] = (await res.json() as ContentfulResponse).items
@@ -22,5 +23,5 @@ export const getContent = async (
     }))
     .sort((a, b) => a.order - b.order);
 
-  return socialLinks;
+  return { socialLinks };
 };
