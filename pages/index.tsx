@@ -3,8 +3,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
+import { ContentfulResponse } from '../types/ContentfulResponse';
+import { SocialLink } from '../types/SocialLink';
 
-const Home: NextPage = () => (
+interface HomeProps {
+  socialLinks: SocialLink[];
+}
+
+const Home: NextPage = ({ socialLinks }: HomeProps) => (
   <>
     <Head>
       <title>Lischana Lane</title>
@@ -135,18 +141,15 @@ const Home: NextPage = () => (
     <footer id="footer">
 
       <ul className="icons">
-        <li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-        <li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-        <li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-        <li><a href="#" className="icon brands fa-linkedin-in"><span className="label">LinkedIn</span></a></li>
-        <li><a href="#" className="icon brands fa-dribbble"><span className="label">Dribbble</span></a></li>
-        <li><a href="#" className="icon brands fa-pinterest"><span className="label">Pinterest</span></a></li>
+        {socialLinks.map((socialLink) => <li key={socialLink.icon}><a href={socialLink.url} className={`icon brands fa-${socialLink.icon}`}><span className="label">{socialLink.type}</span></a></li>)}
       </ul>
 
       <ul className="menu">
-        <li>&copy; Untitled</li>
+        <li>&copy; Lischana Lane</li>
+        <li><a href="http://www.curtiscode.dev" target="_blank" rel="noreferrer">curtiscode.dev</a></li>
         <li>
           Design:
+          &nbsp;
           <a href="https://html5up.net">HTML5 UP</a>
         </li>
       </ul>
@@ -156,3 +159,28 @@ const Home: NextPage = () => (
 );
 
 export default Home;
+
+export async function getStaticProps() {
+  const {
+    CONTENTFUL_SPACEID: spaceId,
+    CONTENTFUL_ACCESS_TOKEN: accessToken,
+  } = process.env;
+
+  const res = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/environments/master/entries/?access_token=${accessToken}`);
+
+  const socialLinks: SocialLink[] = (await res.json() as ContentfulResponse).items
+    .filter((item) => item.sys.contentType.sys.id === 'social')
+    .map((item) => ({
+      icon: item.fields.icon,
+      type: item.fields.type,
+      order: item.fields.order,
+      url: item.fields.url,
+    }))
+    .sort((a, b) => a.order - b.order);
+
+  return {
+    props: {
+      socialLinks,
+    },
+  };
+}
