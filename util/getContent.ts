@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 import { ContentfulResponse } from '../types/ContentfulResponse';
 import { SocialLink } from '../types/SocialLink';
 
