@@ -10,7 +10,7 @@ interface HomeProps {
   socialLinks: SocialLink[];
 }
 
-const Home: NextPage = ({ socialLinks }: HomeProps) => (
+const Home: NextPage<HomeProps> = ({ socialLinks }: HomeProps) => (
   <>
     <Head>
       <title>Lischana Lane</title>
