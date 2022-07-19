@@ -1,6 +1,27 @@
 import React from 'react';
 import { Section } from '../types/Section';
 
+const styleMapper = {
+  heading: 'style1',
+  single: 'style2',
+  gallery: 'style3',
+};
+
+const getClassNames = (section: Section) => {
+  const { type } = section;
+
+  const classes: string[] = ['main'];
+  classes.push(styleMapper[type]);
+
+  if (type === 'heading' || type === 'single') {
+    classes.push('dark');
+  }
+
+  classes.push('fullscreen');
+
+  return classes.join(' ');
+};
+
 const SectionDescription = ({ description }: { description: Array<any> }) => (
   description
     .map((d) => d.value).join(' ')
@@ -20,7 +41,7 @@ export function SectionDisplay({
     <section
       id={slug}
       key={slug}
-      className="main style1 dark fullscreen"
+      className={getClassNames(section)}
       style={{
         background: `url(images/overlay.png), url(${image})`,
       }}
