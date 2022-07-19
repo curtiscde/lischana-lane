@@ -3,15 +3,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
+import { SectionDisplay } from '../components/SectionDisplay';
 import { ContentfulContent } from '../types/ContentfulContent';
+import { Section } from '../types/Section';
 import { SocialLink } from '../types/SocialLink';
 import { getContent } from '../util/getContent';
 
 interface HomeProps {
   socialLinks: SocialLink[];
+  sections: Section[];
 }
 
-const Home: NextPage<HomeProps> = ({ socialLinks }: HomeProps) => (
+const Home: NextPage<HomeProps> = ({ socialLinks, sections }: HomeProps) => (
   <>
     <Head>
       <title>Lischana Lane</title>
@@ -31,6 +34,12 @@ const Home: NextPage<HomeProps> = ({ socialLinks }: HomeProps) => (
         </ul>
       </nav>
     </header>
+
+    {
+      sections.map((section) => (
+        <SectionDisplay section={section} />
+      ))
+    }
 
     <section id="intro" className="main style1 dark fullscreen">
       <div className="content">
@@ -172,11 +181,12 @@ export async function getStaticProps() {
   }
 
   const content: ContentfulContent = await getContent({ spaceId, accessToken });
-  const { socialLinks } = content;
+  const { socialLinks, sections } = content;
 
   return {
     props: {
       socialLinks,
+      sections,
     },
   };
 }
