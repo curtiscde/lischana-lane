@@ -1,26 +1,11 @@
 import React from 'react';
 import { Section } from '../types/Section';
+import { getSectionClassNames } from '../util/getSectionClassNames';
 
-const styleMapper = {
-  heading: 'style1',
-  single: 'style2',
-  gallery: 'style3',
-};
-
-const getClassNames = (section: Section) => {
-  const { type } = section;
-
-  const classes: string[] = ['main'];
-  classes.push(styleMapper[type]);
-
-  if (type === 'heading' || type === 'single') {
-    classes.push('dark');
-  }
-
-  classes.push('fullscreen');
-
-  return classes.join(' ');
-};
+const getDivStyles = (section: Section) => {
+  if (section.type === 'single') return 'content box style2';
+  return 'content';
+}
 
 const SectionDescription = ({ description }: { description: Array<any> }) => (
   description
@@ -28,11 +13,15 @@ const SectionDescription = ({ description }: { description: Array<any> }) => (
 );
 
 interface SectionDisplayProps {
-  section: Section
+  section: Section;
+  previousSection: Section | undefined;
+  nextSection: Section | undefined;
 }
 
 export function SectionDisplay({
   section,
+  previousSection,
+  nextSection,
 }: SectionDisplayProps) {
   const {
     description, image, slug, title,
@@ -41,12 +30,12 @@ export function SectionDisplay({
     <section
       id={slug}
       key={slug}
-      className={getClassNames(section)}
+      className={getSectionClassNames({ section, previousSection })}
       style={{
         backgroundImage: `url(images/overlay.png), url(${image})`,
       }}
     >
-      <div className="content">
+      <div className={getDivStyles(section)}>
         <header>
           <h2>{title}</h2>
         </header>
