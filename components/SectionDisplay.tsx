@@ -5,12 +5,20 @@ import { getSectionClassNames } from '../util/getSectionClassNames';
 const getDivStyles = (section: Section) => {
   if (section.type === 'single') return 'content box style2';
   return 'content';
-}
+};
 
 const SectionDescription = ({ description }: { description: Array<any> }) => (
   description
     .map((d) => d.value).join(' ')
 );
+
+function SectionFooter({ nextSection }: { nextSection:Section }) {
+  return (
+    <footer>
+      <a href={`#${nextSection.slug}`} className="button style2 down">More</a>
+    </footer>
+  );
+}
 
 interface SectionDisplayProps {
   section: Section;
@@ -42,9 +50,9 @@ export function SectionDisplay({
         <p>
           {SectionDescription({ description })}
         </p>
-        <footer>
-          <a href="#one" className="button style2 down">More</a>
-        </footer>
+        {
+          nextSection !== undefined && <SectionFooter nextSection={nextSection} />
+        }
       </div>
     </section>
   );
