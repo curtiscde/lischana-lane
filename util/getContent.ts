@@ -1,7 +1,10 @@
 import fetch from 'node-fetch';
 import { ContentfulContent } from '../types/ContentfulContent';
 import { ContentfulResponse } from '../types/ContentfulResponse';
+import { Section } from '../types/Section';
 import { SocialLink } from '../types/SocialLink';
+import { getSections } from './getSections';
+import { getSocialLinks } from './getSocialLinks';
 
 interface GetContentProps {
   spaceId: string;
@@ -13,15 +16,9 @@ export const getContent = async (
 ): Promise<ContentfulContent> => {
   const res = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/environments/master/entries/?access_token=${accessToken}`);
 
-  const socialLinks: SocialLink[] = (await res.json() as ContentfulResponse).items
-    .filter((item) => item.sys.contentType.sys.id === 'social')
-    .map((item) => ({
-      icon: item.fields.icon,
-      type: item.fields.type,
-      order: item.fields.order,
-      url: item.fields.url,
-    }))
-    .sort((a, b) => a.order - b.order);
+  const contentfulResponse: ContentfulResponse = await res.json() as ContentfulResponse;
+  const socialLinks: SocialLink[] = getSocialLinks(contentfulResponse);
+  const sections: Section[] = getSections(contentfulResponse);
 
-  return { socialLinks };
+  return { socialLinks, sections };
 };

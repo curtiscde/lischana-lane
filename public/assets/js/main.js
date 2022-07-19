@@ -60,8 +60,6 @@
 
 						$main.each(function() {
 
-							console.log('sdsd')
-
 							var $this = $(this);
 
 							$this.css('height', '');
