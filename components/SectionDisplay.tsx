@@ -43,7 +43,7 @@ export function SectionDisplay({
       key={slug}
       className={getClassNames(section)}
       style={{
-        background: `url(images/overlay.png), url(${image})`,
+        backgroundImage: `url(images/overlay.png), url(${image})`,
       }}
     >
       <div className="content">
