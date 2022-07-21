@@ -2441,3 +2441,10 @@ body.is-touch .main {
 	}
 
 }
+
+.style1,
+.style2 {
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}

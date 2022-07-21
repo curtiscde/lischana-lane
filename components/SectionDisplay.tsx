@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '../types/Section';
 import { getSectionClassNames } from '../util/getSectionClassNames';
+import { SectionGallery } from './SectionGallery';
 
 const getDivStyles = (section: Section) => {
   if (section.type === 'single') return 'content box style2';
@@ -32,7 +33,7 @@ export function SectionDisplay({
   nextSection,
 }: SectionDisplayProps) {
   const {
-    description, image, slug, title,
+    description, image, slug, title, type,
   } = section;
   return (
     <section
@@ -50,6 +51,9 @@ export function SectionDisplay({
         <p>
           {SectionDescription({ description })}
         </p>
+        {
+          type === 'gallery' && <SectionGallery section={section} />
+        }
         {
           nextSection !== undefined && <SectionFooter nextSection={nextSection} />
         }
