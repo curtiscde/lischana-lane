@@ -17,7 +17,7 @@ export function SectionGallery({ section }: SectionGalleryProps) {
               href={image}
               className="image fit"
             >
-              <img src={image} title="LL" alt="" />
+              <img src={`${image}?fit=thumb&f=center&w=477&h=440`} title="LL" alt="" />
             </a>
           </article>
         ))
