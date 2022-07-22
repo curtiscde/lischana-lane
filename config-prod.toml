@@ -20,7 +20,7 @@ theme = "hugo-creative-theme"
 	# To provide some metadata for search engines feel free to add some
 	# information about you and your website.
 	name = "Lischana Lane"
-	description = "Media Lecturer, Photographer and Filmmaker based in London"
+	description = "Media Lecturer, Photographer and Filmmaker."
 
 	# The path must be relative to the static folder
 	favicon = "https://s.gravatar.com/avatar/784dc9d50d2d4ef433dda5ceb6a68927?s=16"
@@ -63,13 +63,13 @@ theme = "hugo-creative-theme"
 
     [[params.services.list]]
         icon = "fa-camera"
-        title = "Practical"
-        description = "Digital photography & filmmaking. Location and studio, creative and commercial."
+        title = "Image"
+        description = "Digital & analogue photography. Location and studio, creative and commercial. Adobe Photoshop, Lightroom & XD"
 
     [[params.services.list]]
-				icon = "fa-desktop"
-				title = "Technical"
-				description = "Adobe Creative Cloud, Final Cut Pro and Aperture."
+				icon = "fa-film"
+				title = "Video"
+				description = "Pre, Production & Post, specialising in documentary. Adobe Premiere Pro."
 
 		[[params.services.list]]
 				icon = "fa-handshake-o"
