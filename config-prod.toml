@@ -41,7 +41,7 @@ theme = "hugo-creative-theme"
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		slogan     = "Lischana Lane"
-		subtitle   = "Media Lecturer, Photographer and Filmmaker based in London"
+		subtitle   = "Media Lecturer, Photographer and Filmmaker."
 		buttonText = "Find out more"
 
 
