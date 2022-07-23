@@ -17,20 +17,19 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" href="assets/css/main.css" />
-          <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+          <link rel="stylesheet" href="ttps://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+          <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+          <link href="assets/css/styles.css" rel="stylesheet" />
         </Head>
-        <body className="is-preload">
+        <body id="page-top">
           <Main />
           <NextScript />
-          <Script src="assets/js/jquery.min.js" strategy="beforeInteractive" />
-          <Script src="assets/js/jquery.poptrox.min.js" strategy="beforeInteractive" />
-          <Script src="assets/js/jquery.scrolly.min.js" strategy="beforeInteractive" />
-          <Script src="assets/js/jquery.scrollex.min.js" strategy="beforeInteractive" />
-          <Script src="assets/js/browser.min.js" strategy="beforeInteractive" />
-          <Script src="assets/js/breakpoints.min.js" strategy="beforeInteractive" />
-          <Script src="assets/js/util.js" strategy="beforeInteractive" />
-          <Script src="assets/js/main.js" strategy="beforeInteractive" />
+          <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" strategy="beforeInteractive" />
+          <Script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js" strategy="beforeInteractive" />
+          <Script src="assets/js/scripts.js" strategy="beforeInteractive" />
+          <Script src="https://cdn.startbootstrap.com/sb-forms-latest.js" strategy="beforeInteractive" />
         </body>
       </Html>
     );
