@@ -90,12 +90,11 @@ theme = "hugo-creative-theme"
 			text = "@lischana_lane"
 			link = "https://www.instagram.com/lischana_lane"
 
-	# Contact section
 	[params.contact]
 		headline = "Get In Touch!"
 		description = "Find out more below"
 		linkedin = "https://www.linkedin.com/in/lischana-lane-7698a233/?ppe=1"
-		youtube = "https://www.youtube.com/channel/UCQsBfg_6p1StjDIWtS4-8jA"
+		instagram = "https://www.instagram.com/lischana_lane"
 
 	# Google Maps section
 	# [params.location]
