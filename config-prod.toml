@@ -48,7 +48,7 @@ theme = "hugo-creative-theme"
 	# About section
 	[params.about]
 		headline    = "About Lischana"
-		description = "Lischana Lane has been teaching Photography & Creative Media in further education for 8 years, and currently lectures at a prominent sixth form in the Midlands, England. She specialises in the documentary style and supporting young people to find their passion and creativity in the digital media arts."
+		description = "Lischana Lane has been teaching Photography, Filmmaking & Creative Media in England's further education colleges for over 8 years. She has delivered courses in Warwickshire, London, Birmingham, and now lectures at Coventry College. She specialises in the documentary style and supporting young people to find their passion and creativity in the digital media arts."
 		buttonText  = "Get in touch!"
 
 
