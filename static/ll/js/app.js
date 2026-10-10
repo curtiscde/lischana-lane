@@ -21,8 +21,6 @@
 
     $('#unite-videos').unitegallery();
 
-    trackAlbumViews();
-
   };
 
   var bindFlickrData = function($flickrGallery, data){
@@ -69,15 +67,6 @@
     });
     return photos;
   };
-
-  var trackAlbumViews = function(){
-    $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
-      var $this = $(this);
-      var projectName = $this.find('.project-name').text().trim();
-      ga('send', 'event', 'Project', 'Open', projectName);
-    });
-
-  }
 
 
   $(function(){
