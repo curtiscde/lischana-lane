@@ -6,10 +6,19 @@ https://www.lischana-lane.co.uk
 
 -------------
 
+## Local development
+
+The theme is a git submodule, so fetch it before the first build:
+
+```shell
+git submodule update --init
+hugo server
+```
+
 ## Deployment
 
 ```shell
-hugo --minify --config config-prod.toml
+hugo --minify
 ```
 
 -------------
